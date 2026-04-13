@@ -111,9 +111,23 @@ export default function Footer() {
 
       <div className="max-w-7xl mx-auto px-6 border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-white/50">
         <p>&copy; {new Date().getFullYear()} Krishna Hospitals. All rights reserved.</p>
-        <div className="flex gap-6">
-          <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
-          <a href="#" className="hover:text-white transition-colors">Terms of Service</a>
+        <div className="flex flex-wrap justify-center md:justify-end items-center gap-y-2 gap-x-6">
+          <div className="flex gap-6">
+            <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
+            <a href="#" className="hover:text-white transition-colors">Terms of Service</a>
+          </div>
+          <span className="w-px h-3 bg-white/10 hidden lg:block"></span>
+          <p className="flex items-center gap-1">
+            Designed & Developed by{" "}
+            <a 
+              href="https://godivatech.com" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-white hover:text-accent font-medium transition-colors"
+            >
+              godivatech
+            </a>
+          </p>
         </div>
       </div>
     </footer>
