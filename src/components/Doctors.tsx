@@ -21,7 +21,7 @@ export default function Doctors() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="text-sm font-semibold uppercase tracking-widest text-accent-light mb-3"
+              className="text-base font-semibold uppercase tracking-widest text-accent-light mb-3"
             >
               Our Experts
             </motion.h2>
@@ -63,9 +63,9 @@ export default function Doctors() {
                </div>
                <div className="text-center sm:text-left">
                   <h4 className="text-2xl font-serif font-bold mb-1">{doc.name}</h4>
-                  <p className="text-accent-light text-sm font-medium mb-4">{doc.role}</p>
-                  <p className="text-slate-300 leading-relaxed text-sm mb-6">{doc.desc}</p>
-                  <a href="tel:9789223246" className="inline-flex text-sm border border-white/20 px-5 py-2.5 rounded-full hover:bg-white hover:text-primary transition-all font-medium group-hover:shadow-lg">
+                  <p className="text-accent-light text-base font-medium mb-4">{doc.role}</p>
+                  <p className="text-slate-300 leading-relaxed text-base mb-6">{doc.desc}</p>
+                  <a href="tel:9789223246" className="inline-flex text-base border border-white/20 px-5 py-2.5 rounded-full hover:bg-white hover:text-primary transition-all font-medium group-hover:shadow-lg">
                     Book Appointment
                   </a>
                </div>

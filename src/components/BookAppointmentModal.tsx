@@ -79,13 +79,13 @@ const BookAppointmentModal: React.FC<BookAppointmentModalProps> = ({ isOpen, onC
                   </div>
                   <h2 className="text-2xl font-serif font-bold">Book Appointment</h2>
                 </div>
-                <p className="text-blue-100/80 text-sm">Fill out the details below and we will confirm your visit.</p>
+                <p className="text-blue-100/80 text-base">Fill out the details below and we will confirm your visit.</p>
               </div>
 
               {/* Form */}
               <form onSubmit={handleSubmit} className="p-6 space-y-5">
                 <div>
-                  <label className="block text-sm font-medium text-slate-700 mb-1">Full Name</label>
+                  <label className="block text-base font-medium text-slate-700 mb-1">Full Name</label>
                   <div className="relative">
                     <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                       <User className="h-5 w-5 text-slate-400" />
@@ -103,7 +103,7 @@ const BookAppointmentModal: React.FC<BookAppointmentModalProps> = ({ isOpen, onC
                 </div>
 
                 <div>
-                  <label className="block text-sm font-medium text-slate-700 mb-1">Phone Number</label>
+                  <label className="block text-base font-medium text-slate-700 mb-1">Phone Number</label>
                   <div className="relative">
                     <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                       <Phone className="h-5 w-5 text-slate-400" />
@@ -122,7 +122,7 @@ const BookAppointmentModal: React.FC<BookAppointmentModalProps> = ({ isOpen, onC
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
                   <div>
-                    <label className="block text-sm font-medium text-slate-700 mb-1">Preferred Date</label>
+                    <label className="block text-base font-medium text-slate-700 mb-1">Preferred Date</label>
                     <div className="relative">
                       <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                         <Calendar className="h-5 w-5 text-slate-400" />
@@ -139,7 +139,7 @@ const BookAppointmentModal: React.FC<BookAppointmentModalProps> = ({ isOpen, onC
                   </div>
 
                   <div>
-                    <label className="block text-sm font-medium text-slate-700 mb-1">Department</label>
+                    <label className="block text-base font-medium text-slate-700 mb-1">Department</label>
                     <div className="relative">
                       <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                         <HeartPulse className="h-5 w-5 text-slate-400" />
@@ -161,7 +161,7 @@ const BookAppointmentModal: React.FC<BookAppointmentModalProps> = ({ isOpen, onC
                 </div>
 
                 <div>
-                  <label className="block text-sm font-medium text-slate-700 mb-1">Message (Optional)</label>
+                  <label className="block text-base font-medium text-slate-700 mb-1">Message (Optional)</label>
                   <div className="relative">
                     <div className="absolute top-3 left-3 pointer-events-none">
                       <MessageSquare className="h-5 w-5 text-slate-400" />
@@ -184,7 +184,7 @@ const BookAppointmentModal: React.FC<BookAppointmentModalProps> = ({ isOpen, onC
                   >
                     Confirm Appointment
                   </button>
-                  <p className="text-center text-xs text-slate-500 mt-4">
+                  <p className="text-center text-sm text-slate-500 mt-4">
                     Your details are secure. We will contact you shortly to confirm timings.
                   </p>
                 </div>

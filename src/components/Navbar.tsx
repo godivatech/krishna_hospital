@@ -16,14 +16,14 @@ export default function Navbar() {
           <img src="/logo.png" alt="Krishna Hospitals" className="h-20 md:h-24 w-auto object-contain transition-transform group-hover:scale-105" />
         </Link>
         
-        <nav className="hidden md:flex gap-8 text-sm font-medium text-primary">
+        <nav className="hidden md:flex gap-8 text-base font-medium text-primary">
           <Link href="#about" className="hover:text-accent transition-colors">About</Link>
           <Link href="#departments" className="hover:text-accent transition-colors">Departments</Link>
           <Link href="#doctors" className="hover:text-accent transition-colors">Doctors</Link>
           <Link href="#testimonials" className="hover:text-accent transition-colors">Testimonials</Link>
         </nav>
 
-        <a href="tel:9789223246" className="hidden md:flex items-center gap-2 bg-primary text-white px-5 py-2.5 rounded-full text-sm font-medium hover:bg-primary-light transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
+        <a href="tel:9789223246" className="hidden md:flex items-center gap-2 bg-primary text-white px-5 py-2.5 rounded-full text-base font-medium hover:bg-primary-light transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
           <Phone className="w-4 h-4" />
           <span>Emergency: 9789223246</span>
         </a>

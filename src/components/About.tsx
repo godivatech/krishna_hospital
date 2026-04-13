@@ -31,7 +31,7 @@ export default function About() {
            transition={{ duration: 0.8, ease: "easeOut" }}
            viewport={{ once: true, margin: "-100px" }}
         >
-          <h2 className="text-sm font-semibold uppercase tracking-widest text-accent mb-3">Who We Are</h2>
+          <h2 className="text-base font-semibold uppercase tracking-widest text-accent mb-3">Who We Are</h2>
           <h3 className="text-4xl md:text-5xl font-serif text-primary leading-tight mb-6">
             A Legacy of Care <br /> & Compassion.
           </h3>
@@ -51,7 +51,7 @@ export default function About() {
                  </div>
                  <div>
                    <div className="font-serif font-bold text-xl text-primary">{stat.value}</div>
-                   <div className="text-sm text-text-muted leading-tight">{stat.label}</div>
+                   <div className="text-base text-text-muted leading-tight">{stat.label}</div>
                  </div>
               </div>
             ))}

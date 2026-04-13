@@ -17,7 +17,7 @@ export default function Testimonials() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-sm font-semibold uppercase tracking-widest text-accent mb-3"
+            className="text-base font-semibold uppercase tracking-widest text-accent mb-3"
           >
             Patient Stories
           </motion.h2>
@@ -53,7 +53,7 @@ export default function Testimonials() {
                    </div>
                    <div>
                      <p className="font-bold text-primary font-serif">{t.author}</p>
-                     <p className="text-xs font-semibold text-accent uppercase tracking-wider">{t.role}</p>
+                     <p className="text-sm font-semibold text-accent uppercase tracking-wider">{t.role}</p>
                    </div>
                 </div>
              </div>

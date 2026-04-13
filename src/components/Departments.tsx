@@ -30,7 +30,7 @@ export default function Departments() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-sm font-semibold uppercase tracking-widest text-accent mb-3"
+            className="text-base font-semibold uppercase tracking-widest text-accent mb-3"
           >
             Capabilities
           </motion.h2>
@@ -72,7 +72,7 @@ export default function Departments() {
                 <dept.icon className="w-7 h-7 text-primary group-hover:text-white transition-colors duration-300" />
               </div>
               <h4 className="text-xl font-serif font-bold text-primary mb-3 relative z-10">{dept.name}</h4>
-              <p className="text-text-muted text-sm leading-relaxed relative z-10">{dept.desc}</p>
+              <p className="text-text-muted text-base leading-relaxed relative z-10">{dept.desc}</p>
             </motion.div>
           ))}
         </div>

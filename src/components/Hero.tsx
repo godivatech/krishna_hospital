@@ -74,7 +74,7 @@ export default function Hero() {
             >
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 text-white backdrop-blur-md mb-8 border border-white/10 shadow-lg">
                 <Activity className="w-4 h-4 text-accent" />
-                <span className="text-sm font-medium tracking-wide">TNCEA Registered Excellence</span>
+                <span className="text-base font-medium tracking-wide">TNCEA Registered Excellence</span>
               </div>
 
               <h1 className="text-4xl md:text-5xl lg:text-7xl font-serif text-white leading-[1.2] mb-6 whitespace-nowrap">
