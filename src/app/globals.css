@@ -1,0 +1,57 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #0b2c4d;
+  --color-primary-light: #164372;
+  --color-accent: #20b2aa;
+  --color-accent-light: #2ee6dc;
+  
+  --font-sans: var(--font-inter);
+  --font-serif: var(--font-playfair);
+}
+
+@layer base {
+  :root {
+    --primary: #0b2c4d; 
+    --primary-light: #164372;
+    --accent: #20b2aa; 
+    --accent-light: #2ee6dc;
+    --background: #f8fafc;
+    --text-main: #1f2937;
+    --text-muted: #64748b;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--background);
+    color: var(--text-main);
+  }
+}
+
+@layer utilities {
+  .glass {
+    background: rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+  }
+
+  .text-gradient {
+    background: linear-gradient(135deg, var(--primary), var(--accent));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  @keyframes marquee {
+    from { transform: translateX(0); }
+    to { transform: translateX(calc(-50% - 1rem)); }
+  }
+
+  .animate-marquee {
+    animation: marquee 40s linear infinite;
+  }
+}
