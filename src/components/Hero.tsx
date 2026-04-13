@@ -15,8 +15,8 @@ export default function Hero() {
       accent: "text-blue-400"
     },
     {
-      title: "24/7 Emergency &",
-      subtitle: "Trauma Center",
+      title: "24/7 Emergency",
+      subtitle: "Care",
       description: "Always ready to help. Our dedicated emergency department handles critical situations round the clock with expert specialists.",
       bgColors: "from-[#0f172a] to-[#334155]",
       accent: "text-emerald-400"
