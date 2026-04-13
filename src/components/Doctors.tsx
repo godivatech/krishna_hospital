@@ -32,7 +32,7 @@ export default function Doctors() {
               transition={{ delay: 0.1 }}
               className="text-4xl md:text-5xl font-serif leading-tight text-white mb-6"
             >
-              Meet Our Board <br /> Certified Specialists
+              Meet Our Board Certified Specialists
             </motion.h3>
           </div>
           <motion.a 

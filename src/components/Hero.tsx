@@ -90,7 +90,7 @@ export default function Hero() {
                   Our Services
                   <ArrowRight className="w-4 h-4" />
                 </a>
-                <button 
+                <button
                   onClick={() => setIsModalOpen(true)}
                   className="flex items-center justify-center gap-2 bg-white/10 backdrop-blur-md text-white border border-white/20 px-8 py-4 rounded-full font-medium hover:bg-white/20 transition-all w-full sm:w-auto group"
                 >

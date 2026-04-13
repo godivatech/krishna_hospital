@@ -33,14 +33,10 @@ export default function About() {
         >
           <h2 className="text-base font-semibold uppercase tracking-widest text-accent mb-3">Who We Are</h2>
           <h3 className="text-4xl md:text-5xl font-serif text-primary leading-tight mb-6">
-            A Legacy of Care <br /> & Compassion.
+            A Legacy of Care and Compassion
           </h3>
-          <p className="text-lg text-text-muted mb-6 leading-relaxed">
-            Established in 2022 in Ramanathapuram, Krishna Hospitals aims to provide the highest standards of surgical and maternity care. With a strong focus on maternal and child care along with general and laparoscopic surgeries, the hospital is committed to delivering compassionate, affordable, and high-quality healthcare.
-          </p>
           <p className="text-lg text-text-muted mb-10 leading-relaxed">
-            <strong>Vision:</strong> To provide safe and advanced healthcare services. <br />
-            <strong>Mission:</strong> To deliver quality treatment with compassion, focusing on surgery and maternity care.
+            Established in 2022 in Ramanathapuram, Krishna Hospitals aims to provide the <span className="font-semibold text-primary">highest standards</span> of surgical and maternity care. With a strong focus on <span className="font-semibold text-primary">maternal and child care</span> along with general and <span className="font-semibold text-primary">laparoscopic surgeries</span>, the hospital is committed to delivering compassionate, affordable, and <span className="font-semibold text-primary">high-quality healthcare</span>.
           </p>
 
           <div className="grid grid-cols-2 gap-8">
