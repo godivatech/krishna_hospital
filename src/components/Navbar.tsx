@@ -13,11 +13,7 @@ export default function Navbar() {
     >
       <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
         <Link href="/" className="flex items-center gap-3 group">
-          <div className="w-10 h-10 bg-primary rounded-full flex items-center justify-center text-white font-serif italic font-bold text-xl transition-transform group-hover:scale-105">K</div>
-          <div className="flex flex-col">
-            <span className="font-serif font-bold text-primary tracking-tight leading-none text-xl">Krishna Hospitals</span>
-            <span className="text-[10px] uppercase tracking-widest text-[#20b2aa] font-bold mt-1">Surgery & Maternity</span>
-          </div>
+          <img src="/logo.png" alt="Krishna Hospitals" className="h-14 w-auto object-contain transition-transform group-hover:scale-105" />
         </Link>
         
         <nav className="hidden md:flex gap-8 text-sm font-medium text-primary">

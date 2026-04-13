@@ -117,13 +117,13 @@ export default function Footer() {
             <a href="#" className="hover:text-white transition-colors">Terms of Service</a>
           </div>
           <span className="w-px h-3 bg-white/10 hidden lg:block"></span>
-          <p className="flex items-center gap-1">
+          <p className="flex items-center gap-1 text-sm">
             Designed & Developed by{" "}
             <a 
               href="https://godivatech.com" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="text-white hover:text-accent font-medium transition-colors"
+              className="text-white hover:text-accent font-bold transition-colors"
             >
               godivatech
             </a>

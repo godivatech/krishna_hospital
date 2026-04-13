@@ -1,10 +1,12 @@
 "use client";
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { ArrowRight, Phone, ChevronLeft, ChevronRight, Activity } from "lucide-react";
+import { ArrowRight, Calendar, ChevronLeft, ChevronRight, Activity } from "lucide-react";
+import BookAppointmentModal from "./BookAppointmentModal";
 
 export default function Hero() {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   const slides = [
     {
@@ -51,12 +53,12 @@ export default function Hero() {
           transition={{ duration: 1.2, ease: "easeInOut" }}
           className={`absolute inset-0 bg-gradient-to-br ${slides[currentSlide].bgColors} z-0`}
         >
-           {/* Abstract grid pattern or overlay */}
-           <div className="absolute inset-0 opacity-10 mix-blend-overlay" style={{ backgroundImage: 'radial-gradient(circle at 2px 2px, white 2px, transparent 0)', backgroundSize: '40px 40px' }} />
-           
-           {/* Abstract shapes matching the theme */}
-           <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-white/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/3 pointer-events-none" />
-           <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-white/5 rounded-full blur-3xl translate-y-1/3 -translate-x-1/3 pointer-events-none" />
+          {/* Abstract grid pattern or overlay */}
+          <div className="absolute inset-0 opacity-10 mix-blend-overlay" style={{ backgroundImage: 'radial-gradient(circle at 2px 2px, white 2px, transparent 0)', backgroundSize: '40px 40px' }} />
+
+          {/* Abstract shapes matching the theme */}
+          <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-white/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/3 pointer-events-none" />
+          <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-white/5 rounded-full blur-3xl translate-y-1/3 -translate-x-1/3 pointer-events-none" />
         </motion.div>
       </AnimatePresence>
 
@@ -74,24 +76,27 @@ export default function Hero() {
                 <Activity className="w-4 h-4 text-accent" />
                 <span className="text-sm font-medium tracking-wide">TNCEA Registered Excellence</span>
               </div>
-              
+
               <h1 className="text-4xl md:text-5xl lg:text-7xl font-serif text-white leading-[1.2] mb-6 whitespace-nowrap">
                 {slides[currentSlide].title} <span className={slides[currentSlide].accent}>{slides[currentSlide].subtitle}</span>
               </h1>
-              
+
               <p className="text-lg md:text-xl text-white/80 mb-10 leading-relaxed max-w-xl">
                 {slides[currentSlide].description}
               </p>
-              
+
               <div className="flex flex-wrap items-center gap-4">
                 <a href="#departments" className="flex items-center justify-center gap-2 bg-white text-[#0a1a36] px-8 py-4 rounded-full font-medium hover:bg-white/90 transition-all w-full sm:w-auto shadow-xl hover:shadow-2xl hover:-translate-y-1">
                   Our Services
                   <ArrowRight className="w-4 h-4" />
                 </a>
-                <a href="tel:9789223246" className="flex items-center justify-center gap-2 bg-white/10 backdrop-blur-md text-white border border-white/20 px-8 py-4 rounded-full font-medium hover:bg-white/20 transition-all w-full sm:w-auto group">
-                  <Phone className="w-4 h-4 group-hover:scale-110 transition-transform" />
+                <button 
+                  onClick={() => setIsModalOpen(true)}
+                  className="flex items-center justify-center gap-2 bg-white/10 backdrop-blur-md text-white border border-white/20 px-8 py-4 rounded-full font-medium hover:bg-white/20 transition-all w-full sm:w-auto group"
+                >
+                  <Calendar className="w-4 h-4 group-hover:scale-110 transition-transform" />
                   Book Appointment
-                </a>
+                </button>
               </div>
             </motion.div>
           </AnimatePresence>
@@ -100,7 +105,7 @@ export default function Hero() {
 
       {/* Slider Controls */}
       <div className="absolute bottom-10 left-6 md:left-auto md:right-10 z-20 flex items-center justify-center md:justify-start gap-6 w-[calc(100%-3rem)] md:w-auto mt-8 md:mt-0">
-        <button 
+        <button
           onClick={prevSlide}
           className="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center text-white hover:bg-white/10 backdrop-blur-sm transition-colors shrink-0 focus:outline-none focus:ring-2 focus:ring-white/50"
           aria-label="Previous slide"
@@ -112,14 +117,13 @@ export default function Hero() {
             <button
               key={idx}
               onClick={() => setCurrentSlide(idx)}
-              className={`h-2 rounded-full transition-all duration-500 focus:outline-none ${
-                currentSlide === idx ? "w-10 bg-white" : "w-3 bg-white/30 hover:bg-white/50"
-              }`}
+              className={`h-2 rounded-full transition-all duration-500 focus:outline-none ${currentSlide === idx ? "w-10 bg-white" : "w-3 bg-white/30 hover:bg-white/50"
+                }`}
               aria-label={`Go to slide ${idx + 1}`}
             />
           ))}
         </div>
-        <button 
+        <button
           onClick={nextSlide}
           className="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center text-white hover:bg-white/10 backdrop-blur-sm transition-colors shrink-0 focus:outline-none focus:ring-2 focus:ring-white/50"
           aria-label="Next slide"
@@ -127,6 +131,8 @@ export default function Hero() {
           <ChevronRight className="w-5 h-5" />
         </button>
       </div>
+
+      <BookAppointmentModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
     </section>
   );
 }
