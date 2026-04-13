@@ -1,131 +1,131 @@
 "use client";
-import { motion, Variants } from "framer-motion";
-import { ArrowRight, Activity, Heart, ShieldPlus, Phone } from "lucide-react";
+import { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { ArrowRight, Phone, ChevronLeft, ChevronRight, Activity } from "lucide-react";
 
 export default function Hero() {
-  const containerVariants: Variants = {
-    hidden: { opacity: 0 },
-    visible: { 
-      opacity: 1,
-      transition: { staggerChildren: 0.15, delayChildren: 0.4 }
-    }
-  };
+  const [currentSlide, setCurrentSlide] = useState(0);
 
-  const itemVariants: Variants = {
-    hidden: { opacity: 0, y: 30 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } }
-  };
+  const slides = [
+    {
+      title: "Advanced Surgery &",
+      subtitle: "Maternity Care",
+      description: "Ramanathapuram's trusted multi-specialty hospital. We bring surgical excellence and compassionate maternity care together under one roof.",
+      bgColors: "from-[#0a1a36] to-[rgb(20,40,90)]",
+      accent: "text-blue-400"
+    },
+    {
+      title: "24/7 Emergency &",
+      subtitle: "Trauma Center",
+      description: "Always ready to help. Our dedicated emergency department handles critical situations round the clock with expert specialists.",
+      bgColors: "from-[#0f172a] to-[#334155]",
+      accent: "text-emerald-400"
+    },
+    {
+      title: "State-of-the-Art",
+      subtitle: "ICU & NICU",
+      description: "Providing the highest level of critical care and advanced life support for adult and neonatal patients in a safe environment.",
+      bgColors: "from-[#1e1b4b] to-[#4338ca]",
+      accent: "text-purple-400"
+    }
+  ];
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % slides.length);
+    }, 6000);
+    return () => clearInterval(timer);
+  }, [slides.length]);
+
+  const nextSlide = () => setCurrentSlide((prev) => (prev + 1) % slides.length);
+  const prevSlide = () => setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
 
   return (
-    <section className="relative min-h-[100svh] flex items-center pt-20 overflow-hidden bg-background">
-      {/* Abstract Background Shapes */}
-      <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-primary/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/3 pointer-events-none" />
-      <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-accent/5 rounded-full blur-3xl translate-y-1/3 -translate-x-1/3 pointer-events-none" />
-      
-      <div className="max-w-7xl mx-auto px-6 w-full relative z-10 grid lg:grid-cols-2 gap-12 lg:gap-8 items-center">
-        <motion.div 
-          variants={containerVariants}
-          initial="hidden"
-          animate="visible"
-          className="max-w-2xl py-12 lg:py-0"
-        >
-          <motion.div variants={itemVariants} className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/5 text-primary text-sm font-medium mb-6">
-            <Activity className="w-4 h-4" />
-            <span>TNCEA Registered Excellence</span>
-          </motion.div>
-          
-          <motion.h1 variants={itemVariants} className="text-5xl md:text-7xl font-serif text-primary leading-[1.1] mb-6">
-            Advanced Surgery, <br />
-            <span className="text-gradient">Safe Motherhood.</span>
-          </motion.h1>
-          
-          <motion.p variants={itemVariants} className="text-lg md:text-xl text-text-muted mb-8 leading-relaxed max-w-xl">
-            Ramanathapuram&apos;s trusted multi-specialty hospital for over 3 years. We bring advanced surgical excellence and compassionate maternity care together under one roof. Equipped with advanced ICU & NICU facilities to ensure the safest treatment.
-          </motion.p>
-          
-          <motion.div variants={itemVariants} className="flex flex-wrap items-center gap-4">
-            <a href="#departments" className="flex items-center justify-center gap-2 bg-primary text-white px-8 py-4 rounded-full font-medium hover:bg-primary-light transition-all shadow-xl hover:shadow-2xl hover:-translate-y-1 w-full sm:w-auto">
-              Our Services
-              <ArrowRight className="w-4 h-4" />
-            </a>
-            <a href="tel:9789223246" className="flex items-center justify-center gap-2 bg-white text-primary border border-primary/20 px-8 py-4 rounded-full font-medium hover:bg-primary/5 transition-all w-full sm:w-auto group">
-              <Phone className="w-4 h-4 group-hover:scale-110 transition-transform" />
-              Book Appointment
-            </a>
-          </motion.div>
-
-          <motion.div variants={itemVariants} className="mt-12 grid grid-cols-2 gap-6 sm:gap-12">
-            <div className="flex items-start gap-4">
-              <div className="w-12 h-12 rounded-2xl bg-accent/10 flex items-center justify-center shrink-0">
-                <ShieldPlus className="w-6 h-6 text-accent" />
-              </div>
-              <div>
-                <h4 className="font-serif font-bold text-primary text-lg">Expert Care</h4>
-                <p className="text-sm text-text-muted mt-1 leading-snug">Specialized surgical & maternity experts</p>
-              </div>
-            </div>
-            <div className="flex items-start gap-4">
-              <div className="w-12 h-12 rounded-2xl bg-accent/10 flex items-center justify-center shrink-0">
-                <Heart className="w-6 h-6 text-accent" />
-              </div>
-              <div>
-                <h4 className="font-serif font-bold text-primary text-lg">Modern ICU/NICU</h4>
-                <p className="text-sm text-text-muted mt-1 leading-snug">Advanced critical care facilities</p>
-              </div>
-            </div>
-          </motion.div>
-        </motion.div>
-
-        {/* Hero Visual Element */}
-        <motion.div 
-          initial={{ opacity: 0, scale: 0.95 }}
+    <section className="relative min-h-[100svh] flex items-center overflow-hidden bg-[#0a1a36]">
+      <AnimatePresence mode="wait">
+        <motion.div
+          key={currentSlide}
+          initial={{ opacity: 0, scale: 1.05 }}
           animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 1, delay: 0.6, ease: [0.22, 1, 0.36, 1] }}
-          className="relative h-[600px] hidden lg:block"
+          exit={{ opacity: 0 }}
+          transition={{ duration: 1.2, ease: "easeInOut" }}
+          className={`absolute inset-0 bg-gradient-to-br ${slides[currentSlide].bgColors} z-0`}
         >
-          <div className="absolute inset-0 bg-primary rounded-[2.5rem] overflow-hidden">
-            <div className="absolute inset-0 bg-gradient-to-br from-primary to-primary-light" />
-            <div className="absolute inset-0 opacity-10 mix-blend-overlay" style={{ backgroundImage: 'radial-gradient(circle at 2px 2px, white 2px, transparent 0)', backgroundSize: '40px 40px' }} />
-            <div className="absolute inset-0 flex items-center justify-center">
-               <div className="w-64 h-64 rounded-full border border-white/10 flex items-center justify-center">
-                 <div className="w-48 h-48 rounded-full border border-white/20 flex items-center justify-center">
-                   <div className="w-32 h-32 rounded-full border border-white/30 flex items-center justify-center bg-white/5 backdrop-blur-xl">
-                      <div className="text-white font-serif italic font-bold text-7xl">K</div>
-                   </div>
-                 </div>
-               </div>
-            </div>
-          </div>
-          
-          {/* Floating Elements */}
-          <motion.div 
-            animate={{ y: [0, -20, 0] }}
-            transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
-            className="absolute top-12 -left-12 glass p-6 rounded-2xl shadow-xl flex items-center gap-4"
-          >
-            <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-md">
-              <Activity className="w-6 h-6 text-accent" />
-            </div>
-            <div>
-              <p className="text-xs text-text-muted font-medium uppercase tracking-wider">Est. 2022</p>
-              <p className="font-serif font-bold text-primary">Trusted Care</p>
-            </div>
-          </motion.div>
-
-          <motion.div 
-            animate={{ y: [0, 20, 0] }}
-            transition={{ duration: 6, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-            className="absolute bottom-24 -right-12 glass p-6 rounded-2xl shadow-xl flex items-center gap-4"
-          >
-            <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-md">
-              <Heart className="w-6 h-6 text-accent" />
-            </div>
-            <div>
-              <p className="font-serif font-bold text-primary">24/7 Emergency</p>
-              <p className="text-xs text-text-muted font-medium mt-0.5">Always ready to help</p>
-            </div>
-          </motion.div>
+           {/* Abstract grid pattern or overlay */}
+           <div className="absolute inset-0 opacity-10 mix-blend-overlay" style={{ backgroundImage: 'radial-gradient(circle at 2px 2px, white 2px, transparent 0)', backgroundSize: '40px 40px' }} />
+           
+           {/* Abstract shapes matching the theme */}
+           <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-white/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/3 pointer-events-none" />
+           <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-white/5 rounded-full blur-3xl translate-y-1/3 -translate-x-1/3 pointer-events-none" />
         </motion.div>
+      </AnimatePresence>
+
+      <div className="max-w-7xl mx-auto px-6 w-full relative z-10 py-32 mt-16 lg:mt-0">
+        <div className="max-w-[1000px]">
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={currentSlide}
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -30 }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+            >
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 text-white backdrop-blur-md mb-8 border border-white/10 shadow-lg">
+                <Activity className="w-4 h-4 text-accent" />
+                <span className="text-sm font-medium tracking-wide">TNCEA Registered Excellence</span>
+              </div>
+              
+              <h1 className="text-4xl md:text-5xl lg:text-7xl font-serif text-white leading-[1.2] mb-6 whitespace-nowrap">
+                {slides[currentSlide].title} <span className={slides[currentSlide].accent}>{slides[currentSlide].subtitle}</span>
+              </h1>
+              
+              <p className="text-lg md:text-xl text-white/80 mb-10 leading-relaxed max-w-xl">
+                {slides[currentSlide].description}
+              </p>
+              
+              <div className="flex flex-wrap items-center gap-4">
+                <a href="#departments" className="flex items-center justify-center gap-2 bg-white text-[#0a1a36] px-8 py-4 rounded-full font-medium hover:bg-white/90 transition-all w-full sm:w-auto shadow-xl hover:shadow-2xl hover:-translate-y-1">
+                  Our Services
+                  <ArrowRight className="w-4 h-4" />
+                </a>
+                <a href="tel:9789223246" className="flex items-center justify-center gap-2 bg-white/10 backdrop-blur-md text-white border border-white/20 px-8 py-4 rounded-full font-medium hover:bg-white/20 transition-all w-full sm:w-auto group">
+                  <Phone className="w-4 h-4 group-hover:scale-110 transition-transform" />
+                  Book Appointment
+                </a>
+              </div>
+            </motion.div>
+          </AnimatePresence>
+        </div>
+      </div>
+
+      {/* Slider Controls */}
+      <div className="absolute bottom-10 left-6 md:left-auto md:right-10 z-20 flex items-center justify-center md:justify-start gap-6 w-[calc(100%-3rem)] md:w-auto mt-8 md:mt-0">
+        <button 
+          onClick={prevSlide}
+          className="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center text-white hover:bg-white/10 backdrop-blur-sm transition-colors shrink-0 focus:outline-none focus:ring-2 focus:ring-white/50"
+          aria-label="Previous slide"
+        >
+          <ChevronLeft className="w-5 h-5" />
+        </button>
+        <div className="flex gap-3">
+          {slides.map((_, idx) => (
+            <button
+              key={idx}
+              onClick={() => setCurrentSlide(idx)}
+              className={`h-2 rounded-full transition-all duration-500 focus:outline-none ${
+                currentSlide === idx ? "w-10 bg-white" : "w-3 bg-white/30 hover:bg-white/50"
+              }`}
+              aria-label={`Go to slide ${idx + 1}`}
+            />
+          ))}
+        </div>
+        <button 
+          onClick={nextSlide}
+          className="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center text-white hover:bg-white/10 backdrop-blur-sm transition-colors shrink-0 focus:outline-none focus:ring-2 focus:ring-white/50"
+          aria-label="Next slide"
+        >
+          <ChevronRight className="w-5 h-5" />
+        </button>
       </div>
     </section>
   );
