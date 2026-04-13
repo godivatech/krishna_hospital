@@ -13,22 +13,22 @@ export default function Hero() {
       title: "Advanced Surgery &",
       subtitle: "Maternity Care",
       description: "Ramanathapuram's trusted multi-specialty hospital. We bring surgical excellence and compassionate maternity care together under one roof.",
-      bgColors: "from-[#0a1a36] to-[rgb(20,40,90)]",
-      accent: "text-blue-400"
+      bgColors: "from-primary to-primary-light",
+      accent: "text-accent-light"
     },
     {
       title: "24/7 Emergency",
       subtitle: "Care",
       description: "Always ready to help. Our dedicated emergency department handles critical situations round the clock with expert specialists.",
-      bgColors: "from-[#0f172a] to-[#334155]",
-      accent: "text-emerald-400"
+      bgColors: "from-[#2D1A22] to-primary",
+      accent: "text-accent"
     },
     {
       title: "State-of-the-Art",
       subtitle: "ICU & NICU",
       description: "Providing the highest level of critical care and advanced life support for adult and neonatal patients in a safe environment.",
-      bgColors: "from-[#1e1b4b] to-[#4338ca]",
-      accent: "text-purple-400"
+      bgColors: "from-[#1a0f14] to-[#4A162B]",
+      accent: "text-accent-light"
     }
   ];
 
@@ -43,7 +43,7 @@ export default function Hero() {
   const prevSlide = () => setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
 
   return (
-    <section className="relative min-h-[100svh] flex items-center overflow-hidden bg-[#0a1a36]">
+    <section className="relative min-h-[100svh] flex items-center overflow-hidden bg-[#2D1A22]">
       <AnimatePresence mode="wait">
         <motion.div
           key={currentSlide}
@@ -86,7 +86,7 @@ export default function Hero() {
               </p>
 
               <div className="flex flex-wrap items-center gap-4">
-                <a href="#departments" className="flex items-center justify-center gap-2 bg-white text-[#0a1a36] px-8 py-4 rounded-full font-medium hover:bg-white/90 transition-all w-full sm:w-auto shadow-xl hover:shadow-2xl hover:-translate-y-1">
+                <a href="#departments" className="flex items-center justify-center gap-2 bg-white text-primary px-8 py-4 rounded-full font-medium hover:bg-white/90 transition-all w-full sm:w-auto shadow-xl hover:shadow-2xl hover:-translate-y-1">
                   Our Services
                   <ArrowRight className="w-4 h-4" />
                 </a>

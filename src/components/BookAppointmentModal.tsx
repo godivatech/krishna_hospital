@@ -56,7 +56,7 @@ const BookAppointmentModal: React.FC<BookAppointmentModalProps> = ({ isOpen, onC
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             onClick={onClose}
-            className="fixed inset-0 bg-[#0a1a36]/60 backdrop-blur-sm z-50"
+            className="fixed inset-0 bg-[#2D1A22]/80 backdrop-blur-sm z-50"
           />
           <div className="fixed inset-0 flex items-center justify-center p-4 z-50 pointer-events-none">
             <motion.div
@@ -66,7 +66,7 @@ const BookAppointmentModal: React.FC<BookAppointmentModalProps> = ({ isOpen, onC
               className="bg-white rounded-3xl shadow-2xl w-full max-w-lg overflow-hidden pointer-events-auto"
             >
               {/* Header */}
-              <div className="bg-gradient-to-r from-[#0a1a36] to-[#1a365d] p-6 text-white relative">
+              <div className="bg-gradient-to-r from-primary to-primary-light p-6 text-white relative">
                 <button
                   onClick={onClose}
                   className="absolute top-4 right-4 p-2 bg-white/10 hover:bg-white/20 rounded-full transition-colors focus:outline-none"
@@ -180,7 +180,7 @@ const BookAppointmentModal: React.FC<BookAppointmentModalProps> = ({ isOpen, onC
                 <div className="pt-2">
                   <button
                     type="submit"
-                    className="w-full bg-[#0a1a36] text-white py-4 rounded-xl font-medium hover:bg-blue-900 transition-colors shadow-lg shadow-blue-900/20 flex items-center justify-center gap-2"
+                    className="w-full bg-primary text-white py-4 rounded-xl font-medium hover:bg-primary-light transition-colors shadow-lg shadow-primary/20 flex items-center justify-center gap-2"
                   >
                     Confirm Appointment
                   </button>

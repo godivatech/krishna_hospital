@@ -11,7 +11,7 @@ export default function Footer() {
   ];
 
   return (
-    <footer id="contact" className="bg-[#0a1a36] text-slate-300 pt-20 pb-10 border-t border-white/10">
+    <footer id="contact" className="bg-primary text-slate-300 pt-20 pb-10 border-t border-white/10">
       <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
         
         {/* Brand Col */}

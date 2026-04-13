@@ -11,9 +11,9 @@ export default function Navbar() {
       transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
       className="fixed top-0 w-full z-50 glass border-b border-white/20"
     >
-      <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+      <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
         <Link href="/" className="flex items-center gap-3 group">
-          <img src="/logo.png" alt="Krishna Hospitals" className="h-14 w-auto object-contain transition-transform group-hover:scale-105" />
+          <img src="/logo.png" alt="Krishna Hospitals" className="h-20 md:h-24 w-auto object-contain transition-transform group-hover:scale-105" />
         </Link>
         
         <nav className="hidden md:flex gap-8 text-sm font-medium text-primary">
