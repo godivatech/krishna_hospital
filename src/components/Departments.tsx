@@ -24,9 +24,9 @@ export default function Departments() {
   return (
     <section id="departments" className="py-32 bg-[var(--background)] relative">
       <div className="max-w-7xl mx-auto px-6">
-        
+
         <div className="text-center max-w-2xl mx-auto mb-20">
-          <motion.h2 
+          <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -34,7 +34,7 @@ export default function Departments() {
           >
             Capabilities
           </motion.h2>
-          <motion.h3 
+          <motion.h3
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -66,7 +66,7 @@ export default function Departments() {
               className="bg-white p-8 rounded-3xl shadow-sm hover:shadow-xl hover:shadow-teal-900/5 transition-all border border-slate-100 group relative overflow-hidden"
             >
               <div className="absolute top-0 right-0 p-8 opacity-0 group-hover:opacity-5 transition-opacity duration-500 pointer-events-none transform translate-x-4 -translate-y-4">
-                  <dept.icon className="w-32 h-32 text-teal-600" />
+                <dept.icon className="w-32 h-32 text-teal-600" />
               </div>
               <div className="w-14 h-14 rounded-2xl bg-teal-50 flex items-center justify-center mb-6 group-hover:bg-teal-600 transition-colors duration-300 relative z-10">
                 <dept.icon className="w-7 h-7 text-teal-600 group-hover:text-white transition-colors duration-300" />
