@@ -1,6 +1,7 @@
 "use client";
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import Image from "next/image";
 import { ArrowRight, Calendar, ChevronLeft, ChevronRight, Activity } from "lucide-react";
 import BookAppointmentModal from "./BookAppointmentModal";
 
@@ -13,21 +14,21 @@ export default function Hero() {
       title: "Advanced Surgery &",
       subtitle: "Maternity Care",
       description: "Ramanathapuram's trusted multi-specialty hospital. We bring surgical excellence and compassionate maternity care together under one roof.",
-      bgColors: "from-primary to-primary-light",
+      image: "/banner_1.png",
       accent: "text-teal-200"
     },
     {
       title: "24/7 Emergency",
       subtitle: "Care",
       description: "Always ready to help. Our dedicated emergency department handles critical situations round the clock with expert specialists.",
-      bgColors: "from-[#111827] to-primary",
+      image: "/banner_2.png",
       accent: "text-teal-200"
     },
     {
       title: "State-of-the-Art",
       subtitle: "ICU & NICU",
       description: "Providing the highest level of critical care and advanced life support for adult and neonatal patients in a safe environment.",
-      bgColors: "from-[#0F172A] to-primary-dark",
+      image: "/banner_3.png",
       accent: "text-teal-400"
     }
   ];
@@ -51,27 +52,34 @@ export default function Hero() {
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 1, ease: "easeInOut" }}
-          className={`absolute inset-0 bg-gradient-to-br ${slides[currentSlide].bgColors} z-0`}
+          className="absolute inset-0 z-0"
         >
+          <Image
+            src={slides[currentSlide].image}
+            alt="Hospital Banner"
+            fill
+            className="object-cover"
+            priority
+          />
+          {/* Enhanced Dark Overlay for Text Readability */}
+          <div className="absolute inset-0 bg-gradient-to-r from-primary-deep/90 via-primary-deep/60 to-transparent z-10" />
+          <div className="absolute inset-0 bg-primary-deep/30 z-10" />
+          
           {/* Refined Mesh Gradient Overlays */}
-          <div className="absolute inset-0 opacity-40 mix-blend-soft-light" 
+          <div className="absolute inset-0 opacity-30 mix-blend-soft-light z-20" 
                style={{ 
                  backgroundImage: `radial-gradient(circle at 20% 30%, var(--accent) 0%, transparent 40%), 
                                    radial-gradient(circle at 80% 70%, var(--accent-light) 0%, transparent 40%)` 
                }} 
           />
           
-          <div className="absolute inset-0 opacity-10" 
+          <div className="absolute inset-0 opacity-5 z-20" 
                style={{ backgroundImage: 'radial-gradient(circle at 2px 2px, white 1px, transparent 0)', backgroundSize: '48px 48px' }} 
           />
-
-          {/* Abstract soft glows */}
-          <div className="absolute top-[-10%] right-[-5%] w-[60%] h-[60%] bg-teal-600/20 rounded-full blur-[120px] pointer-events-none animate-pulse" />
-          <div className="absolute bottom-[-10%] left-[-5%] w-[50%] h-[50%] bg-primary-light/10 rounded-full blur-[100px] pointer-events-none" />
         </motion.div>
       </AnimatePresence>
 
-      <div className="max-w-7xl mx-auto px-6 w-full relative z-10 py-32 mt-16 lg:mt-0">
+      <div className="max-w-7xl mx-auto px-6 w-full relative z-30 py-32 mt-16 lg:mt-0">
         <div className="max-w-[1000px]">
           <AnimatePresence mode="wait">
             <motion.div
@@ -86,11 +94,11 @@ export default function Hero() {
                 <span className="text-base font-medium tracking-wide">TNCEA Registered Excellence</span>
               </div>
 
-              <h1 className="text-4xl md:text-5xl lg:text-7xl font-serif text-white leading-[1.2] mb-6 whitespace-nowrap">
+              <h1 className="text-4xl md:text-5xl lg:text-7xl font-serif text-white leading-[1.2] mb-6">
                 {slides[currentSlide].title} <span className={slides[currentSlide].accent}>{slides[currentSlide].subtitle}</span>
               </h1>
 
-              <p className="text-lg md:text-xl text-white/80 mb-10 leading-relaxed max-w-xl">
+              <p className="text-lg md:text-xl text-white/90 mb-10 leading-relaxed max-w-xl">
                 {slides[currentSlide].description}
               </p>
 
@@ -113,7 +121,7 @@ export default function Hero() {
       </div>
 
       {/* Slider Controls */}
-      <div className="absolute bottom-10 left-6 md:left-auto md:right-10 z-20 flex items-center justify-center md:justify-start gap-6 w-[calc(100%-3rem)] md:w-auto mt-8 md:mt-0">
+      <div className="absolute bottom-10 left-6 md:left-auto md:right-10 z-40 flex items-center justify-center md:justify-start gap-6 w-[calc(100%-3rem)] md:w-auto mt-8 md:mt-0">
         <button
           onClick={prevSlide}
           className="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center text-white hover:bg-white/10 backdrop-blur-sm transition-colors shrink-0 focus:outline-none focus:ring-2 focus:ring-white/50"
