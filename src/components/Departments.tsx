@@ -30,7 +30,7 @@ export default function Departments() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-base font-semibold uppercase tracking-widest text-accent mb-3"
+            className="text-base font-semibold uppercase tracking-widest text-teal-600 mb-3"
           >
             Capabilities
           </motion.h2>
@@ -63,13 +63,13 @@ export default function Departments() {
               viewport={{ once: true }}
               transition={{ delay: idx * 0.05 }}
               whileHover={{ y: -8 }}
-              className="bg-white p-8 rounded-3xl shadow-sm hover:shadow-xl hover:shadow-accent/5 transition-all border border-slate-100 group relative overflow-hidden"
+              className="bg-white p-8 rounded-3xl shadow-sm hover:shadow-xl hover:shadow-teal-900/5 transition-all border border-slate-100 group relative overflow-hidden"
             >
               <div className="absolute top-0 right-0 p-8 opacity-0 group-hover:opacity-5 transition-opacity duration-500 pointer-events-none transform translate-x-4 -translate-y-4">
-                  <dept.icon className="w-32 h-32 text-accent" />
+                  <dept.icon className="w-32 h-32 text-teal-600" />
               </div>
-              <div className="w-14 h-14 rounded-2xl bg-accent/5 flex items-center justify-center mb-6 group-hover:bg-accent transition-colors duration-300 relative z-10">
-                <dept.icon className="w-7 h-7 text-accent group-hover:text-white transition-colors duration-300" />
+              <div className="w-14 h-14 rounded-2xl bg-teal-50 flex items-center justify-center mb-6 group-hover:bg-teal-600 transition-colors duration-300 relative z-10">
+                <dept.icon className="w-7 h-7 text-teal-600 group-hover:text-white transition-colors duration-300" />
               </div>
               <h4 className="text-xl font-serif font-bold text-primary mb-3 relative z-10">{dept.name}</h4>
               <p className="text-text-muted text-base leading-relaxed relative z-10">{dept.desc}</p>

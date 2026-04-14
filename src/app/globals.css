@@ -1,21 +1,25 @@
 @import "tailwindcss";
 
 @theme {
-  --color-primary: #8C183E;
-  --color-primary-light: #A8204D;
-  --color-accent: #24A8AC;
-  --color-accent-light: #36C3C7;
-  
+  --color-primary: #1B8A8D;
+  --color-primary-light: #24A8AC;
+  --color-primary-dark: #0A5C5E;
+  --color-primary-deep: #052F30;
+  --color-accent: #8C183E;
+  --color-accent-light: #A8204D;
+
   --font-sans: var(--font-poppins);
   --font-serif: var(--font-playfair);
 }
 
 @layer base {
   :root {
-    --primary: #8C183E; 
-    --primary-light: #A8204D;
-    --accent: #24A8AC; 
-    --accent-light: #36C3C7;
+    --primary: #1B8A8D;
+    --primary-light: #24A8AC;
+    --primary-dark: #0A5C5E;
+    --primary-deep: #052F30;
+    --accent: #8C183E;
+    --accent-light: #A8204D;
     --background: #FCFBF9;
     --text-main: #2D1A22;
     --text-muted: #7A5F6A;
@@ -47,8 +51,13 @@
   }
 
   @keyframes marquee {
-    from { transform: translateX(0); }
-    to { transform: translateX(calc(-50% - 1rem)); }
+    from {
+      transform: translateX(0);
+    }
+
+    to {
+      transform: translateX(calc(-50% - 1rem));
+    }
   }
 
   .animate-marquee {

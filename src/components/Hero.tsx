@@ -14,21 +14,21 @@ export default function Hero() {
       subtitle: "Maternity Care",
       description: "Ramanathapuram's trusted multi-specialty hospital. We bring surgical excellence and compassionate maternity care together under one roof.",
       bgColors: "from-primary to-primary-light",
-      accent: "text-accent-light"
+      accent: "text-teal-200"
     },
     {
       title: "24/7 Emergency",
       subtitle: "Care",
       description: "Always ready to help. Our dedicated emergency department handles critical situations round the clock with expert specialists.",
-      bgColors: "from-[#2D1A22] to-primary",
-      accent: "text-accent"
+      bgColors: "from-[#111827] to-primary",
+      accent: "text-teal-200"
     },
     {
       title: "State-of-the-Art",
       subtitle: "ICU & NICU",
       description: "Providing the highest level of critical care and advanced life support for adult and neonatal patients in a safe environment.",
-      bgColors: "from-[#1a0f14] to-[#4A162B]",
-      accent: "text-accent-light"
+      bgColors: "from-[#0F172A] to-primary-dark",
+      accent: "text-teal-400"
     }
   ];
 
@@ -43,7 +43,7 @@ export default function Hero() {
   const prevSlide = () => setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
 
   return (
-    <section className="relative min-h-[100svh] flex items-center overflow-hidden bg-[#2D1A22]">
+    <section className="relative min-h-[100svh] flex items-center overflow-hidden bg-primary-deep">
       <AnimatePresence mode="wait">
         <motion.div
           key={currentSlide}
@@ -66,7 +66,7 @@ export default function Hero() {
           />
 
           {/* Abstract soft glows */}
-          <div className="absolute top-[-10%] right-[-5%] w-[60%] h-[60%] bg-accent/20 rounded-full blur-[120px] pointer-events-none animate-pulse" />
+          <div className="absolute top-[-10%] right-[-5%] w-[60%] h-[60%] bg-teal-600/20 rounded-full blur-[120px] pointer-events-none animate-pulse" />
           <div className="absolute bottom-[-10%] left-[-5%] w-[50%] h-[50%] bg-primary-light/10 rounded-full blur-[100px] pointer-events-none" />
         </motion.div>
       </AnimatePresence>
@@ -82,7 +82,7 @@ export default function Hero() {
               transition={{ duration: 0.8, ease: "easeOut" }}
             >
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 text-white backdrop-blur-md mb-8 border border-white/10 shadow-lg">
-                <Activity className="w-4 h-4 text-accent" />
+                <Activity className="w-4 h-4 text-teal-300" />
                 <span className="text-base font-medium tracking-wide">TNCEA Registered Excellence</span>
               </div>
 
@@ -95,17 +95,17 @@ export default function Hero() {
               </p>
 
               <div className="flex flex-wrap items-center gap-4">
-                <a href="#departments" className="flex items-center justify-center gap-2 bg-white text-primary px-8 py-4 rounded-full font-medium hover:bg-white/90 transition-all w-full sm:w-auto shadow-xl hover:shadow-2xl hover:-translate-y-1">
-                  Our Services
-                  <ArrowRight className="w-4 h-4" />
-                </a>
                 <button
                   onClick={() => setIsModalOpen(true)}
-                  className="flex items-center justify-center gap-2 bg-white/10 backdrop-blur-md text-white border border-white/20 px-8 py-4 rounded-full font-medium hover:bg-white/20 transition-all w-full sm:w-auto group"
+                  className="flex items-center justify-center gap-2 bg-accent text-white px-8 py-4 rounded-full font-semibold hover:bg-accent-light transition-all w-full sm:w-auto shadow-xl hover:shadow-accent/40 hover:-translate-y-1 group"
                 >
                   <Calendar className="w-4 h-4 group-hover:scale-110 transition-transform" />
                   Book Appointment
                 </button>
+                <a href="#departments" className="flex items-center justify-center gap-2 bg-white/10 backdrop-blur-md text-white border border-white/20 px-8 py-4 rounded-full font-medium hover:bg-white/20 transition-all w-full sm:w-auto">
+                  Our Services
+                  <ArrowRight className="w-4 h-4 ml-1" />
+                </a>
               </div>
             </motion.div>
           </AnimatePresence>

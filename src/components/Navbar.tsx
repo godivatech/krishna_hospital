@@ -39,22 +39,22 @@ export default function Navbar() {
       transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
       className="fixed top-0 w-full z-50 glass border-b border-white/20"
     >
-      <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+      <div className="max-w-7xl mx-auto px-6 py-2 flex items-center justify-between">
         <Link href="/" className="flex items-center gap-3 group relative z-50">
-          <img src="/Logo%20Png.png" alt="Krishna Hospitals" className="h-16 md:h-20 w-auto object-contain transition-transform group-hover:scale-105" />
+          <img src="/Logo%20Png.png" alt="Krishna Hospitals" className="h-16 md:h-24 w-auto object-contain transition-transform group-hover:scale-105" />
         </Link>
         
         {/* Desktop Nav */}
         <nav className="hidden md:flex gap-8 text-base font-medium text-primary">
           {navLinks.map((link) => (
-            <Link key={link.href} href={link.href} className="hover:text-accent transition-colors">
+            <Link key={link.href} href={link.href} className="hover:text-teal-600 transition-colors">
               {link.label}
             </Link>
           ))}
         </nav>
 
         <div className="flex items-center gap-4">
-          <a href="tel:9789223246" className="hidden md:flex items-center gap-2 bg-primary text-white px-5 py-2.5 rounded-full text-base font-medium hover:bg-accent transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
+          <a href="tel:9789223246" className="hidden md:flex items-center gap-2 bg-accent text-white px-5 py-2.5 rounded-full text-base font-medium hover:bg-accent-light transition-all shadow-lg hover:shadow-accent/40 transform hover:-translate-y-0.5">
             <Phone className="w-4 h-4" />
             <span>Emergency: 9789223246</span>
           </a>
@@ -80,7 +80,11 @@ export default function Navbar() {
             transition={{ type: "spring", damping: 25, stiffness: 200 }}
             className="fixed inset-0 bg-white z-40 md:hidden flex flex-col justify-center items-center p-8"
           >
-            <nav className="flex flex-col gap-8 text-center">
+            <nav className="flex flex-col gap-8 text-center items-center">
+              <Link href="/" onClick={() => setIsOpen(false)} className="mb-8">
+                <img src="/Logo%20Png.png" alt="Krishna Hospitals" className="h-24 w-auto object-contain" />
+              </Link>
+
               {navLinks.map((link, i) => (
                 <motion.div
                   key={link.href}
@@ -102,15 +106,18 @@ export default function Navbar() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.1 + navLinks.length * 0.1 }}
-                className="mt-8"
+                className="mt-8 flex flex-col items-center gap-4"
               >
                 <a 
                   href="tel:9789223246" 
-                  className="flex items-center gap-3 bg-primary text-white px-8 py-4 rounded-full text-lg font-medium shadow-xl"
-                  onClick={() => setIsOpen(false)}
                 >
-                  <Phone className="w-5 h-5" />
-                  <span>Emergency: 9789223246</span>
+                  <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-accent/10 border border-accent/20">
+                    <span className="w-2 h-2 rounded-full bg-accent animate-pulse" />
+                    <span className="text-sm font-bold text-accent uppercase tracking-wider">Emergency 24/7</span>
+                  </div>
+                </a>
+                <a href="tel:9789223246" className="text-2xl font-bold text-primary">
+                  9789223246
                 </a>
               </motion.div>
             </nav>

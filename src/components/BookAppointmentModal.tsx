@@ -56,7 +56,7 @@ const BookAppointmentModal: React.FC<BookAppointmentModalProps> = ({ isOpen, onC
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             onClick={onClose}
-            className="fixed inset-0 bg-[#2D1A22]/80 backdrop-blur-sm z-50"
+            className="fixed inset-0 bg-[#042F2E]/90 backdrop-blur-sm z-50"
           />
           <div className="fixed inset-0 flex items-center justify-center p-4 z-50 pointer-events-none">
             <motion.div
@@ -180,7 +180,7 @@ const BookAppointmentModal: React.FC<BookAppointmentModalProps> = ({ isOpen, onC
                 <div className="pt-2">
                   <button
                     type="submit"
-                    className="w-full bg-primary text-white py-4 rounded-xl font-medium hover:bg-primary-light transition-colors shadow-lg shadow-primary/20 flex items-center justify-center gap-2"
+                    className="w-full bg-accent text-white py-4 rounded-xl font-bold hover:bg-accent-light transition-all shadow-lg shadow-accent/20 flex items-center justify-center gap-2 text-lg"
                   >
                     Confirm Appointment
                   </button>

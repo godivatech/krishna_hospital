@@ -12,7 +12,7 @@ export default function Doctors() {
     <section id="doctors" className="py-32 bg-primary text-white relative overflow-hidden">
       {/* Background decorations */}
       <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-white/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/3 pointer-events-none"></div>
-      <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-accent/10 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2 pointer-events-none"></div>
+      <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-teal-400/10 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2 pointer-events-none"></div>
       
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-20 gap-8">
@@ -21,7 +21,7 @@ export default function Doctors() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="text-base font-semibold uppercase tracking-widest text-accent-light mb-3"
+              className="text-base font-semibold uppercase tracking-widest text-teal-200 mb-3"
             >
               Our Experts
             </motion.h2>
@@ -40,7 +40,7 @@ export default function Doctors() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             href="#contact" 
-            className="inline-flex items-center gap-2 group text-accent-light hover:text-white transition-colors pb-2 border-b border-accent-light/30 hover:border-white shrink-0"
+            className="inline-flex items-center gap-2 group text-teal-200 hover:text-white transition-colors pb-2 border-b border-teal-200/30 hover:border-white shrink-0"
           >
             <span>View All Doctors</span>
             <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -63,9 +63,9 @@ export default function Doctors() {
                </div>
                <div className="text-center sm:text-left">
                   <h4 className="text-2xl font-serif font-bold mb-1">{doc.name}</h4>
-                  <p className="text-accent-light text-base font-medium mb-4">{doc.role}</p>
+                  <p className="text-teal-200 text-base font-medium mb-4">{doc.role}</p>
                   <p className="text-slate-300 leading-relaxed text-base mb-6">{doc.desc}</p>
-                  <a href="tel:9789223246" className="inline-flex text-base border border-white/20 px-5 py-2.5 rounded-full hover:bg-white hover:text-primary transition-all font-medium group-hover:shadow-lg">
+                  <a href="tel:9789223246" className="inline-flex text-base bg-accent text-white px-6 py-2.5 rounded-full hover:bg-accent-light transition-all font-medium shadow-lg hover:shadow-accent/40">
                     Book Appointment
                   </a>
                </div>

@@ -31,7 +31,7 @@ export default function About() {
            transition={{ duration: 0.8, ease: "easeOut" }}
            viewport={{ once: true, margin: "-100px" }}
         >
-          <h2 className="text-base font-semibold uppercase tracking-widest text-accent mb-3">Who We Are</h2>
+          <h2 className="text-base font-semibold uppercase tracking-widest text-teal-600 mb-3">Who We Are</h2>
           <h3 className="text-4xl md:text-5xl font-serif text-primary leading-tight mb-6">
             A Legacy of Care and Compassion
           </h3>
@@ -42,8 +42,8 @@ export default function About() {
           <div className="grid grid-cols-2 gap-x-8 gap-y-10">
             {stats.map((stat, idx) => (
               <div key={idx} className="flex gap-4 items-start group">
-                 <div className="w-12 h-12 rounded-2xl bg-accent/5 flex items-center justify-center shrink-0 group-hover:bg-accent/10 transition-colors">
-                   <stat.icon className="w-6 h-6 text-accent" />
+                 <div className="w-12 h-12 rounded-2xl bg-teal-50 flex items-center justify-center shrink-0 group-hover:bg-teal-100 transition-colors">
+                   <stat.icon className="w-6 h-6 text-teal-600" />
                  </div>
                  <div>
                    <div className="font-serif font-bold text-xl text-primary mb-1">{stat.value}</div>
@@ -66,9 +66,9 @@ export default function About() {
            </motion.div>
            
            <motion.div style={{ y: y2 }} className="absolute bottom-10 left-0 w-[55%] h-[60%] rounded-3xl overflow-hidden shadow-xl border-8 border-white z-20 bg-slate-100">
-              <div className="absolute inset-0 bg-accent/10 mix-blend-multiply"></div>
+              <div className="absolute inset-0 bg-teal-600/10 mix-blend-multiply"></div>
               {/* Image placeholder */}
-              <div className="absolute inset-0 flex flex-col items-center justify-center text-accent/40 font-medium">
+              <div className="absolute inset-0 flex flex-col items-center justify-center text-teal-600/40 font-medium">
                  <Users className="w-12 h-12 mb-2 opacity-50" />
                  <span>Expert Care</span>
               </div>

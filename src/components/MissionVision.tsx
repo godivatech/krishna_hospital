@@ -9,18 +9,18 @@ export default function MissionVision() {
   return (
     <section className="py-24 bg-[var(--background)] relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-6">
-        
+
         <div className="text-center mb-16">
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent/5 text-accent text-sm font-semibold uppercase tracking-widest mb-4 border border-accent/10"
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-teal-600/5 text-teal-600 text-sm font-semibold uppercase tracking-widest mb-4 border border-teal-600/10"
           >
             <Sparkles className="w-4 h-4" />
             <span>Discover Our Core</span>
           </motion.div>
-          <motion.h2 
+          <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -32,7 +32,7 @@ export default function MissionVision() {
         </div>
 
         {/* Interactive Accordion Container */}
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, scale: 0.95 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
@@ -40,7 +40,7 @@ export default function MissionVision() {
           className="flex flex-col md:flex-row min-h-[600px] w-full rounded-[2.5rem] overflow-hidden shadow-2xl"
         >
           {/* Vision Panel - Maroon */}
-          <div 
+          <div
             onMouseEnter={() => setHovered("vision")}
             onMouseLeave={() => setHovered(null)}
             onFocus={() => setHovered("vision")}
@@ -51,11 +51,11 @@ export default function MissionVision() {
               flex-1 min-h-[300px] overflow-hidden
             `}
           >
-            <div className="absolute inset-0 bg-gradient-to-br from-[#800020] to-[#4A0012] transition-transform duration-1000 group-hover:scale-105"></div>
-            
+            <div className="absolute inset-0 bg-gradient-to-br from-primary-dark to-primary-deep transition-transform duration-1000 group-hover:scale-105"></div>
+
             {/* Massive watermark icon */}
             <div className="absolute -top-24 -right-24 text-white/5 transition-transform duration-1000 group-hover:scale-110 group-hover:-translate-x-10 group-hover:rotate-12 pointer-events-none">
-               <Eye className="w-96 h-96" />
+              <Eye className="w-96 h-96" />
             </div>
 
             <div className="relative z-10 w-full md:max-w-xl text-center md:text-left">
@@ -70,7 +70,7 @@ export default function MissionVision() {
           </div>
 
           {/* Mission Panel - Teal */}
-          <div 
+          <div
             onMouseEnter={() => setHovered("mission")}
             onMouseLeave={() => setHovered(null)}
             onFocus={() => setHovered("mission")}
@@ -82,10 +82,10 @@ export default function MissionVision() {
             `}
           >
             <div className="absolute inset-0 bg-gradient-to-br from-[#24A8AC] to-[#1a7e81] transition-transform duration-1000 group-hover:scale-105"></div>
-            
+
             {/* Massive watermark icon */}
             <div className="absolute -top-24 -right-24 text-white/10 transition-transform duration-1000 group-hover:scale-110 group-hover:-translate-x-10 group-hover:-rotate-12 pointer-events-none">
-               <Target className="w-96 h-96" />
+              <Target className="w-96 h-96" />
             </div>
 
             <div className="relative z-10 w-full md:max-w-xl text-center md:text-left">
