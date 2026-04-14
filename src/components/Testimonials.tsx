@@ -47,11 +47,11 @@ export default function Testimonials() {
                 <p className="text-text-muted mb-8 relative z-10 text-lg italic leading-relaxed min-h-[120px]">
                   &quot;{t.text}&quot;
                 </p>
-                <div className="relative z-10 flex items-center gap-4">
-                   <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary font-bold font-serif">
+                <div className="relative z-10 flex items-center gap-4" suppressHydrationWarning>
+                   <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary font-bold font-serif" suppressHydrationWarning>
                      {t.author.charAt(0)}
                    </div>
-                   <div>
+                   <div suppressHydrationWarning>
                      <p className="font-bold text-primary font-serif">{t.author}</p>
                      <p className="text-sm font-semibold text-accent uppercase tracking-wider">{t.role}</p>
                    </div>
