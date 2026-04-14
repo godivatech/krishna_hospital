@@ -7,7 +7,7 @@ export default function MissionVision() {
   const [hovered, setHovered] = useState<"vision" | "mission" | null>(null);
 
   return (
-    <section className="py-24 bg-slate-50 relative overflow-hidden">
+    <section className="py-24 bg-[var(--background)] relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-6">
         
         <div className="text-center mb-16">
@@ -15,7 +15,7 @@ export default function MissionVision() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/5 text-primary text-sm font-semibold uppercase tracking-widest mb-4 border border-primary/10"
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent/5 text-accent text-sm font-semibold uppercase tracking-widest mb-4 border border-accent/10"
           >
             <Sparkles className="w-4 h-4" />
             <span>Discover Our Core</span>
@@ -25,7 +25,7 @@ export default function MissionVision() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="text-4xl md:text-5xl font-serif text-slate-900 mb-6"
+            className="text-4xl md:text-5xl font-serif text-primary leading-tight mb-6 text-center"
           >
             Our Driving Force
           </motion.h2>
@@ -39,7 +39,7 @@ export default function MissionVision() {
           transition={{ duration: 0.7, ease: "easeOut" }}
           className="flex flex-col md:flex-row min-h-[600px] w-full rounded-[2.5rem] overflow-hidden shadow-2xl"
         >
-          {/* Vision Panel */}
+          {/* Vision Panel - Maroon */}
           <div 
             onMouseEnter={() => setHovered("vision")}
             onMouseLeave={() => setHovered(null)}
@@ -51,15 +51,15 @@ export default function MissionVision() {
               flex-1 min-h-[300px] overflow-hidden
             `}
           >
-            <div className="absolute inset-0 bg-gradient-to-br from-[#002147] to-[#001026] transition-transform duration-1000 group-hover:scale-105"></div>
+            <div className="absolute inset-0 bg-gradient-to-br from-[#800020] to-[#4A0012] transition-transform duration-1000 group-hover:scale-105"></div>
             
             {/* Massive watermark icon */}
             <div className="absolute -top-24 -right-24 text-white/5 transition-transform duration-1000 group-hover:scale-110 group-hover:-translate-x-10 group-hover:rotate-12 pointer-events-none">
                <Eye className="w-96 h-96" />
             </div>
 
-            <div className="relative z-10 w-full md:max-w-xl">
-              <div className="w-16 h-16 bg-white/10 backdrop-blur-md rounded-2xl flex items-center justify-center mb-8 border border-white/20 transform transition-transform duration-700 group-hover:-translate-y-2">
+            <div className="relative z-10 w-full md:max-w-xl text-center md:text-left">
+              <div className="w-16 h-16 bg-white/10 backdrop-blur-md rounded-2xl flex items-center justify-center mb-8 border border-white/20 transform transition-transform duration-700 group-hover:-translate-y-2 mx-auto md:mx-0">
                 <Eye className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-4xl md:text-5xl font-serif font-bold text-white mb-6">Our Vision</h3>
@@ -69,7 +69,7 @@ export default function MissionVision() {
             </div>
           </div>
 
-          {/* Mission Panel */}
+          {/* Mission Panel - Teal */}
           <div 
             onMouseEnter={() => setHovered("mission")}
             onMouseLeave={() => setHovered(null)}
@@ -81,15 +81,15 @@ export default function MissionVision() {
               flex-1 min-h-[300px] overflow-hidden
             `}
           >
-            <div className="absolute inset-0 bg-gradient-to-br from-[#00A8E8] to-[#007ba8] transition-transform duration-1000 group-hover:scale-105"></div>
+            <div className="absolute inset-0 bg-gradient-to-br from-[#24A8AC] to-[#1a7e81] transition-transform duration-1000 group-hover:scale-105"></div>
             
             {/* Massive watermark icon */}
             <div className="absolute -top-24 -right-24 text-white/10 transition-transform duration-1000 group-hover:scale-110 group-hover:-translate-x-10 group-hover:-rotate-12 pointer-events-none">
                <Target className="w-96 h-96" />
             </div>
 
-            <div className="relative z-10 w-full md:max-w-xl">
-              <div className="w-16 h-16 bg-white/20 backdrop-blur-md rounded-2xl flex items-center justify-center mb-8 border border-white/30 transform transition-transform duration-700 group-hover:-translate-y-2">
+            <div className="relative z-10 w-full md:max-w-xl text-center md:text-left">
+              <div className="w-16 h-16 bg-white/20 backdrop-blur-md rounded-2xl flex items-center justify-center mb-8 border border-white/30 transform transition-transform duration-700 group-hover:-translate-y-2 mx-auto md:mx-0">
                 <HeartPulse className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-4xl md:text-5xl font-serif font-bold text-white mb-6">Our Mission</h3>

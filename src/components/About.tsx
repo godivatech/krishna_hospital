@@ -21,7 +21,7 @@ export default function About() {
   ];
 
   return (
-    <section id="about" ref={containerRef} className="py-32 relative bg-white overflow-hidden">
+    <section id="about" ref={containerRef} className="py-32 relative bg-[var(--background)] overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
         
         {/* Left Side: Text Content */}
@@ -39,14 +39,14 @@ export default function About() {
             Established in 2022 in Ramanathapuram, Krishna Hospitals aims to provide the <span className="font-semibold text-primary">highest standards</span> of surgical and maternity care. With a strong focus on <span className="font-semibold text-primary">maternal and child care</span> along with general and <span className="font-semibold text-primary">laparoscopic surgeries</span>, the hospital is committed to delivering compassionate, affordable, and <span className="font-semibold text-primary">high-quality healthcare</span>.
           </p>
 
-          <div className="grid grid-cols-2 gap-8">
+          <div className="grid grid-cols-2 gap-x-8 gap-y-10">
             {stats.map((stat, idx) => (
-              <div key={idx} className="flex gap-4 items-start">
-                 <div className="w-12 h-12 rounded-2xl bg-primary/5 flex items-center justify-center shrink-0">
-                   <stat.icon className="w-6 h-6 text-primary" />
+              <div key={idx} className="flex gap-4 items-start group">
+                 <div className="w-12 h-12 rounded-2xl bg-accent/5 flex items-center justify-center shrink-0 group-hover:bg-accent/10 transition-colors">
+                   <stat.icon className="w-6 h-6 text-accent" />
                  </div>
                  <div>
-                   <div className="font-serif font-bold text-xl text-primary">{stat.value}</div>
+                   <div className="font-serif font-bold text-xl text-primary mb-1">{stat.value}</div>
                    <div className="text-base text-text-muted leading-tight">{stat.label}</div>
                  </div>
               </div>

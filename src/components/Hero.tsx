@@ -47,18 +47,27 @@ export default function Hero() {
       <AnimatePresence mode="wait">
         <motion.div
           key={currentSlide}
-          initial={{ opacity: 0, scale: 1.05 }}
-          animate={{ opacity: 1, scale: 1 }}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          transition={{ duration: 1.2, ease: "easeInOut" }}
+          transition={{ duration: 1, ease: "easeInOut" }}
           className={`absolute inset-0 bg-gradient-to-br ${slides[currentSlide].bgColors} z-0`}
         >
-          {/* Abstract grid pattern or overlay */}
-          <div className="absolute inset-0 opacity-10 mix-blend-overlay" style={{ backgroundImage: 'radial-gradient(circle at 2px 2px, white 2px, transparent 0)', backgroundSize: '40px 40px' }} />
+          {/* Refined Mesh Gradient Overlays */}
+          <div className="absolute inset-0 opacity-40 mix-blend-soft-light" 
+               style={{ 
+                 backgroundImage: `radial-gradient(circle at 20% 30%, var(--accent) 0%, transparent 40%), 
+                                   radial-gradient(circle at 80% 70%, var(--accent-light) 0%, transparent 40%)` 
+               }} 
+          />
+          
+          <div className="absolute inset-0 opacity-10" 
+               style={{ backgroundImage: 'radial-gradient(circle at 2px 2px, white 1px, transparent 0)', backgroundSize: '48px 48px' }} 
+          />
 
-          {/* Abstract shapes matching the theme */}
-          <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-white/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/3 pointer-events-none" />
-          <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-white/5 rounded-full blur-3xl translate-y-1/3 -translate-x-1/3 pointer-events-none" />
+          {/* Abstract soft glows */}
+          <div className="absolute top-[-10%] right-[-5%] w-[60%] h-[60%] bg-accent/20 rounded-full blur-[120px] pointer-events-none animate-pulse" />
+          <div className="absolute bottom-[-10%] left-[-5%] w-[50%] h-[50%] bg-primary-light/10 rounded-full blur-[100px] pointer-events-none" />
         </motion.div>
       </AnimatePresence>
 

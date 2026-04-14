@@ -22,7 +22,7 @@ export default function Departments() {
   ];
 
   return (
-    <section id="departments" className="py-32 bg-[#f8fafc] relative">
+    <section id="departments" className="py-32 bg-[var(--background)] relative">
       <div className="max-w-7xl mx-auto px-6">
         
         <div className="text-center max-w-2xl mx-auto mb-20">
@@ -63,13 +63,13 @@ export default function Departments() {
               viewport={{ once: true }}
               transition={{ delay: idx * 0.05 }}
               whileHover={{ y: -8 }}
-              className="bg-white p-8 rounded-3xl shadow-sm hover:shadow-xl hover:shadow-primary/5 transition-all border border-slate-100 group relative overflow-hidden"
+              className="bg-white p-8 rounded-3xl shadow-sm hover:shadow-xl hover:shadow-accent/5 transition-all border border-slate-100 group relative overflow-hidden"
             >
               <div className="absolute top-0 right-0 p-8 opacity-0 group-hover:opacity-5 transition-opacity duration-500 pointer-events-none transform translate-x-4 -translate-y-4">
-                  <dept.icon className="w-32 h-32 text-primary" />
+                  <dept.icon className="w-32 h-32 text-accent" />
               </div>
-              <div className="w-14 h-14 rounded-2xl bg-primary/5 flex items-center justify-center mb-6 group-hover:bg-primary transition-colors duration-300 relative z-10">
-                <dept.icon className="w-7 h-7 text-primary group-hover:text-white transition-colors duration-300" />
+              <div className="w-14 h-14 rounded-2xl bg-accent/5 flex items-center justify-center mb-6 group-hover:bg-accent transition-colors duration-300 relative z-10">
+                <dept.icon className="w-7 h-7 text-accent group-hover:text-white transition-colors duration-300" />
               </div>
               <h4 className="text-xl font-serif font-bold text-primary mb-3 relative z-10">{dept.name}</h4>
               <p className="text-text-muted text-base leading-relaxed relative z-10">{dept.desc}</p>

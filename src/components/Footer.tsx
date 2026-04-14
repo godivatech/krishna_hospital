@@ -123,7 +123,7 @@ export default function Footer() {
               href="https://godivatech.com" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="text-white hover:text-accent font-bold transition-colors"
+              className="text-white hover:text-accent-light font-bold transition-colors"
             >
               godivatech
             </a>
