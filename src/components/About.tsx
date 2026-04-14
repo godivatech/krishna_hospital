@@ -1,6 +1,7 @@
 "use client";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
+import Image from "next/image";
 import { Award, Clock, Users, Building2 } from "lucide-react";
 
 export default function About() {
@@ -56,22 +57,24 @@ export default function About() {
 
         {/* Right Side: Parallax Images */}
         <div className="relative h-[600px] hidden lg:block">
-           <motion.div style={{ y: y1 }} className="absolute top-0 right-0 w-[60%] h-[70%] rounded-3xl overflow-hidden shadow-2xl z-10 bg-slate-200">
-              <div className="absolute inset-0 bg-primary/10 mix-blend-multiply"></div>
-              {/* Image placeholder */}
-              <div className="absolute inset-0 flex flex-col items-center justify-center text-primary/40 font-medium">
-                 <Building2 className="w-12 h-12 mb-2 opacity-50" />
-                 <span>Advanced Setup</span>
-              </div>
+           <motion.div style={{ y: y1 }} className="absolute top-0 right-0 w-[60%] h-[70%] rounded-3xl overflow-hidden shadow-2xl z-10">
+              <Image 
+                src="/advanced_setup_v2.png" 
+                alt="Advanced Medical Setup" 
+                fill
+                className="object-cover"
+              />
+              <div className="absolute inset-0 bg-primary/5 hover:bg-transparent transition-colors duration-500"></div>
            </motion.div>
            
-           <motion.div style={{ y: y2 }} className="absolute bottom-10 left-0 w-[55%] h-[60%] rounded-3xl overflow-hidden shadow-xl border-8 border-white z-20 bg-slate-100">
-              <div className="absolute inset-0 bg-teal-600/10 mix-blend-multiply"></div>
-              {/* Image placeholder */}
-              <div className="absolute inset-0 flex flex-col items-center justify-center text-teal-600/40 font-medium">
-                 <Users className="w-12 h-12 mb-2 opacity-50" />
-                 <span>Expert Care</span>
-              </div>
+           <motion.div style={{ y: y2 }} className="absolute bottom-10 left-0 w-[55%] h-[60%] rounded-3xl overflow-hidden shadow-xl border-8 border-white z-20">
+              <Image 
+               src="/expert_care_v4.png" 
+               alt="Expert Medical Care" 
+               fill
+               className="object-cover"
+              />
+              <div className="absolute inset-0 bg-teal-600/5 hover:bg-transparent transition-colors duration-500"></div>
            </motion.div>
         </div>
         
