@@ -6,15 +6,15 @@ import Image from "next/image";
 export default function Doctors() {
   const doctors = [
     { 
-      name: "Dr. N. Dinesh Mukil", 
-      role: "Laparoscopic & General Surgery", 
-      desc: "MBBS, MS, FIAGES, FAGIE, FALS", 
+      name: "Dr. Dinesh Mukil", 
+      role: "Surgical Gastroenterologist", 
+      desc: "MBBS., MS., FIAGES., FALS.", 
       img: "/dr-dinesh-mukil.png" 
     },
     { 
-      name: "Dr. P. Nandhini", 
-      role: "Obstetrics & Gynecology", 
-      desc: "MBBS, MS (OG)", 
+      name: "Dr. Nandhini Dinesh Mukil", 
+      role: "Obstetrician & Gynaecologist", 
+      desc: "MBBS., MS(OG)., DNB(OG)., MRCOG(UK)., FMAS.", 
       img: "/dr-nandhini.png" 
     },
   ];

@@ -18,8 +18,8 @@ export default function Hero() {
       accent: "text-teal-200"
     },
     {
-      title: "24/7 Emergency",
-      subtitle: "Care",
+      title: "Healing hands,",
+      subtitle: "Caring hearts",
       description: "Always ready to help. Our dedicated emergency department handles critical situations round the clock with expert specialists.",
       image: "/banner_2.png",
       accent: "text-teal-200"

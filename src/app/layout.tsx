@@ -14,7 +14,7 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: "Krishna Hospitals | Advanced Surgery, Safe Motherhood",
+  title: "Krishna Hospital | Advanced Surgery, Safe Motherhood",
   description: "Specialized healthcare provider in Ramanathapuram offering expert surgical and maternity services. Equipped with advanced operation theatre facilities, ICU, and NICU.",
 };
 

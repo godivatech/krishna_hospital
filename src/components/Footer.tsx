@@ -21,11 +21,11 @@ export default function Footer() {
               <HeartPulse className="w-6 h-6" />
             </div>
             <span className="font-serif text-2xl font-bold tracking-tight text-white leading-none">
-              Krishna <br /> <span className="text-base font-medium text-teal-200 uppercase tracking-widest font-sans">Hospitals</span>
+              Krishna <br /> <span className="text-base font-medium text-teal-200 uppercase tracking-widest font-sans">Hospital</span>
             </span>
           </div>
-          <p className="text-base leading-relaxed mb-8">
-            Providing world-class medical care with compassion and excellence in Ramanathapuram since 2022. 
+          <p className="text-text-muted leading-relaxed mb-8">
+            Healing hands, Caring hearts. Leading multispecialty hospital in Ramanathapuram providing world-class surgical and maternity care.
           </p>
           <div className="flex gap-4">
             <a href="#" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-teal-600 hover:text-white transition-colors">
@@ -62,10 +62,7 @@ export default function Footer() {
             <li className="flex items-start gap-4">
               <div className="mt-1"><MapPin className="w-5 h-5 text-teal-300" /></div>
               <span className="text-base leading-relaxed">
-                Madurai Main Road,<br />
-                Near Villaiyar Kovil Bus Stop,<br />
-                Opp. to Chidambaram Pillai Oorani,<br />
-                Ramanathapuram - 623501
+                NO.45, Madurai Road, Opposite to Chidambaram Pillai Oorani, Ramanathapuram-62350
               </span>
             </li>
             <li className="flex items-center gap-4">
@@ -110,7 +107,7 @@ export default function Footer() {
       </div>
 
       <div className="max-w-7xl mx-auto px-6 border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-white/50">
-        <p>&copy; {new Date().getFullYear()} Krishna Hospitals. All rights reserved.</p>
+        <p className="text-text-muted text-sm italic">© {new Date().getFullYear()} Krishna Hospital. Established 2021.</p>
         <div className="flex flex-wrap justify-center md:justify-end items-center gap-y-2 gap-x-6">
           <div className="flex gap-6">
             <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>

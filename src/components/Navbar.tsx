@@ -41,7 +41,7 @@ export default function Navbar() {
     >
       <div className="max-w-7xl mx-auto px-6 py-2 flex items-center justify-between">
         <Link href="/" className="flex items-center gap-3 group relative z-50">
-          <img src="/Logo%20Png.png" alt="Krishna Hospitals" className="h-16 md:h-24 w-auto object-contain transition-transform group-hover:scale-105" />
+          <img src="/Logo%20Png.png" alt="Krishna Hospital" className="h-16 md:h-24 w-auto object-contain transition-transform group-hover:scale-105" />
         </Link>
         
         {/* Desktop Nav */}
@@ -82,7 +82,7 @@ export default function Navbar() {
           >
             <nav className="flex flex-col gap-8 text-center items-center">
               <Link href="/" onClick={() => setIsOpen(false)} className="mb-8">
-                <img src="/Logo%20Png.png" alt="Krishna Hospitals" className="h-24 w-auto object-contain" />
+                <img src="/Logo%20Png.png" alt="Krishna Hospital" className="h-24 w-auto object-contain" />
               </Link>
 
               {navLinks.map((link, i) => (
@@ -113,7 +113,7 @@ export default function Navbar() {
                 >
                   <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-accent/10 border border-accent/20">
                     <span className="w-2 h-2 rounded-full bg-accent animate-pulse" />
-                    <span className="text-sm font-bold text-accent uppercase tracking-wider">Emergency 24/7</span>
+                    <span className="text-2xl font-serif font-bold text-primary tracking-tight">Krishna Hospital</span>
                   </div>
                 </a>
                 <a href="tel:9789223246" className="text-2xl font-bold text-primary">
