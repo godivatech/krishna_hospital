@@ -1,11 +1,22 @@
 "use client";
 import { motion } from "framer-motion";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Phone, Activity } from "lucide-react";
+import Image from "next/image";
 
 export default function Doctors() {
   const doctors = [
-    { name: "Dr. N. Dinesh Mukil", role: "Laparoscopic & General Surgery", desc: "MBBS, MS, FIAGES, FAGIE, FALS", img: "DM" },
-    { name: "Dr. P. Nandhini", role: "Obstetrics & Gynecology", desc: "MBBS, MS (OG)", img: "PN" },
+    { 
+      name: "Dr. N. Dinesh Mukil", 
+      role: "Laparoscopic & General Surgery", 
+      desc: "MBBS, MS, FIAGES, FAGIE, FALS", 
+      img: "/dr-dinesh-mukil.png" 
+    },
+    { 
+      name: "Dr. P. Nandhini", 
+      role: "Obstetrics & Gynecology", 
+      desc: "MBBS, MS (OG)", 
+      img: "/dr-nandhini.png" 
+    },
   ];
 
   return (
@@ -47,27 +58,55 @@ export default function Doctors() {
           </motion.a>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="grid lg:grid-cols-2 gap-12">
           {doctors.map((doc, idx) => (
             <motion.div 
               key={idx}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: idx * 0.1 }}
-              className="group flex flex-col sm:flex-row gap-6 items-center sm:items-start p-6 rounded-3xl bg-white/5 border border-white/10 hover:bg-white/10 transition-colors"
+              transition={{ delay: idx * 0.2 }}
+              className="group flex flex-col md:flex-row gap-8 items-center md:items-stretch p-8 rounded-[2rem] bg-white/[0.03] border border-white/10 hover:bg-white/[0.05] transition-all duration-500 hover:shadow-2xl hover:shadow-primary-deep/50"
             >
-               <div className="w-32 h-32 rounded-2xl bg-white/10 shrink-0 overflow-hidden relative border border-white/5">
-                 {/* Image Placeholder */}
-                 <div className="absolute inset-0 flex items-center justify-center text-white/50 font-serif font-bold text-4xl group-hover:scale-110 transition-transform duration-500">{doc.img}</div>
+               <div className="w-full md:w-72 aspect-square rounded-2xl overflow-hidden relative border border-white/10 group-hover:border-teal-400/30 transition-colors duration-500 shadow-xl">
+                 <Image
+                   src={doc.img}
+                   alt={doc.name}
+                   fill
+                   className="object-cover group-hover:scale-105 transition-transform duration-700 ease-in-out"
+                   sizes="(max-width: 768px) 100vw, 288px"
+                   priority={idx === 0}
+                 />
+                 <div className="absolute inset-0 bg-gradient-to-t from-primary/60 via-transparent to-transparent opacity-60"></div>
+                 
+                 {/* Decorative Overlay */}
+                 <div className="absolute bottom-4 left-4 right-4 z-20">
+                    <div className="flex items-center gap-2">
+                      <span className="w-2 h-2 rounded-full bg-teal-400 animate-pulse"></span>
+                      <span className="text-[10px] uppercase tracking-widest font-bold text-white/80">Senior Specialist</span>
+                    </div>
+                 </div>
                </div>
-               <div className="text-center sm:text-left">
-                  <h4 className="text-2xl font-serif font-bold mb-1">{doc.name}</h4>
-                  <p className="text-teal-200 text-base font-medium mb-4">{doc.role}</p>
-                  <p className="text-slate-300 leading-relaxed text-base mb-6">{doc.desc}</p>
-                  <a href="tel:9789223246" className="inline-flex text-base bg-accent text-white px-6 py-2.5 rounded-full hover:bg-accent-light transition-all font-medium shadow-lg hover:shadow-accent/40">
-                    Book Appointment
-                  </a>
+               
+               <div className="flex flex-col flex-1 py-2">
+                  <div className="mb-auto text-center md:text-left">
+                    <h4 className="text-3xl font-serif font-bold mb-2 text-white group-hover:text-teal-200 transition-colors">{doc.name}</h4>
+                    <p className="text-teal-400 text-lg font-medium mb-4 flex items-center justify-center md:justify-start gap-2">
+                      <Activity className="w-4 h-4" />
+                      {doc.role}
+                    </p>
+                    <div className="h-px w-12 bg-teal-400/30 mb-6 mx-auto md:mx-0"></div>
+                    <p className="text-slate-300 leading-relaxed text-base mb-8 italic">
+                      {doc.desc}
+                    </p>
+                  </div>
+                  
+                  <div className="flex flex-col sm:flex-row gap-4">
+                    <a href="tel:9789223246" className="flex-1 inline-flex items-center justify-center gap-2 bg-accent text-white px-6 py-4 rounded-xl hover:bg-accent-light transition-all font-semibold shadow-lg hover:shadow-accent/40 hover:-translate-y-0.5">
+                      <Phone className="w-4 h-4" />
+                      Consult Now
+                    </a>
+                  </div>
                </div>
             </motion.div>
           ))}
