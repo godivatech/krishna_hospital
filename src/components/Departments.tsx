@@ -72,7 +72,7 @@ export default function Departments() {
                 <dept.icon className="w-7 h-7 text-teal-600 group-hover:text-white transition-colors duration-300" />
               </div>
               <h4 className="text-xl font-serif font-bold text-primary mb-3 relative z-10">{dept.name}</h4>
-              <p className="text-text-muted text-base leading-relaxed relative z-10">{dept.desc}</p>
+              <p className="text-text-muted text-lg leading-relaxed relative z-10">{dept.desc}</p>
             </motion.div>
           ))}
         </div>
