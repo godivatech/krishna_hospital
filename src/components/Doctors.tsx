@@ -1,6 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
-import { ArrowRight, Phone, Activity } from "lucide-react";
+import { Phone, Activity } from "lucide-react";
 import Image from "next/image";
 
 export default function Doctors() {
@@ -43,19 +43,9 @@ export default function Doctors() {
               transition={{ delay: 0.1 }}
               className="text-4xl md:text-5xl font-serif leading-tight text-white mb-6"
             >
-              Meet Our Board Certified Specialists
+              Healing Hands, Exceptional Expertise
             </motion.h3>
           </div>
-          <motion.a 
-            initial={{ opacity: 0, x: 20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            href="#contact" 
-            className="inline-flex items-center gap-2 group text-teal-200 hover:text-white transition-colors pb-2 border-b border-teal-200/30 hover:border-white shrink-0"
-          >
-            <span>View All Doctors</span>
-            <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-          </motion.a>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-12">
@@ -66,45 +56,53 @@ export default function Doctors() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: idx * 0.2 }}
-              className="group flex flex-col md:flex-row gap-8 items-center md:items-stretch p-8 rounded-[2rem] bg-white/[0.03] border border-white/10 hover:bg-white/[0.05] transition-all duration-500 hover:shadow-2xl hover:shadow-primary-deep/50"
+              className="group flex flex-col md:flex-row gap-8 items-center md:items-stretch p-8 rounded-[2.5rem] bg-white/[0.07] backdrop-blur-xl border border-white/10 hover:border-teal-400/40 transition-all duration-500 hover:shadow-[0_20px_50px_rgba(0,0,0,0.3)] relative overflow-hidden"
             >
-               <div className="w-full md:w-72 aspect-square rounded-2xl overflow-hidden relative border border-white/10 group-hover:border-teal-400/30 transition-colors duration-500 shadow-xl">
+              {/* Decorative background glow for hover */}
+              <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-teal-400/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
+
+               <div className="w-full md:w-72 aspect-square rounded-3xl overflow-hidden relative border border-white/10 group-hover:border-teal-400/30 transition-all duration-500 shadow-2xl ring-1 ring-white/5">
                  <Image
                    src={doc.img}
                    alt={doc.name}
                    fill
-                   className="object-cover group-hover:scale-105 transition-transform duration-700 ease-in-out"
+                   className="object-cover group-hover:scale-110 transition-transform duration-1000 ease-in-out"
                    sizes="(max-width: 768px) 100vw, 288px"
                    priority={idx === 0}
                  />
-                 <div className="absolute inset-0 bg-gradient-to-t from-primary/60 via-transparent to-transparent opacity-60"></div>
+                 <div className="absolute inset-0 bg-gradient-to-t from-primary-deep/80 via-primary-deep/20 to-transparent opacity-80 group-hover:opacity-60 transition-opacity duration-500"></div>
                  
                  {/* Decorative Overlay */}
-                 <div className="absolute bottom-4 left-4 right-4 z-20">
-                    <div className="flex items-center gap-2">
-                      <span className="w-2 h-2 rounded-full bg-teal-400 animate-pulse"></span>
-                      <span className="text-[10px] uppercase tracking-widest font-bold text-white/80">Senior Specialist</span>
+                 <div className="absolute bottom-6 left-6 right-6 z-20">
+                    <div className="flex items-center gap-2.5 bg-primary-deep/40 backdrop-blur-md px-3 py-1.5 rounded-full w-fit border border-white/10">
+                      <span className="w-2 h-2 rounded-full bg-teal-400 shadow-[0_0_8px_rgba(45,212,191,0.8)] animate-pulse"></span>
+                      <span className="text-[10px] uppercase tracking-[0.2em] font-bold text-teal-50">Senior Specialist</span>
                     </div>
                  </div>
                </div>
                
-               <div className="flex flex-col flex-1 py-2">
+               <div className="flex flex-col flex-1 py-4 relative z-10">
                   <div className="mb-auto text-center md:text-left">
-                    <h4 className="text-3xl font-serif font-bold mb-2 text-white group-hover:text-teal-200 transition-colors">{doc.name}</h4>
-                    <p className="text-teal-400 text-lg font-medium mb-4 flex items-center justify-center md:justify-start gap-2">
-                      <Activity className="w-4 h-4" />
+                    <h4 className="text-3xl font-serif font-bold mb-3 text-white group-hover:text-teal-200 transition-colors tracking-tight">{doc.name}</h4>
+                    <p className="text-teal-400 text-lg font-semibold mb-5 flex items-center justify-center md:justify-start gap-2.5">
+                      <span className="p-1.5 bg-teal-400/10 rounded-lg">
+                        <Activity className="w-4 h-4 text-teal-300" />
+                      </span>
                       {doc.role}
                     </p>
-                    <div className="h-px w-12 bg-teal-400/30 mb-6 mx-auto md:mx-0"></div>
-                    <p className="text-slate-300 leading-relaxed text-base mb-8 italic">
+                    <div className="h-[2px] w-12 bg-gradient-to-r from-teal-400/50 to-transparent mb-6 mx-auto md:mx-0"></div>
+                    <p className="text-slate-200/90 leading-relaxed text-base mb-10 font-medium italic">
                       {doc.desc}
                     </p>
                   </div>
                   
                   <div className="flex flex-col sm:flex-row gap-4">
-                    <a href="tel:9789223246" className="flex-1 inline-flex items-center justify-center gap-2 bg-accent text-white px-6 py-4 rounded-xl hover:bg-accent-light transition-all font-semibold shadow-lg hover:shadow-accent/40 hover:-translate-y-0.5">
-                      <Phone className="w-4 h-4" />
-                      Consult Now
+                    <a 
+                      href="tel:9789223246" 
+                      className="flex-1 inline-flex items-center justify-center gap-2.5 bg-gradient-to-r from-accent to-accent-light text-white px-8 py-4.5 rounded-2xl hover:shadow-xl hover:shadow-accent/30 transition-all duration-300 font-bold tracking-wide active:scale-95 group/btn"
+                    >
+                      <Phone className="w-4 h-4 group-hover/btn:rotate-12 transition-transform" />
+                      <span>Consult Now</span>
                     </a>
                   </div>
                </div>

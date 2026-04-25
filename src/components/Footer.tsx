@@ -13,7 +13,7 @@ export default function Footer() {
   return (
     <footer id="contact" className="bg-primary-deep text-slate-300 pt-20 pb-10 border-t border-white/10">
       <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
-        
+
         {/* Brand Col */}
         <div className="lg:col-span-1">
           <div className="flex items-center gap-2 mb-6">
@@ -86,39 +86,34 @@ export default function Footer() {
           <h4 className="text-white font-serif font-bold text-xl mb-6">Working Hours</h4>
           <div className="bg-white/5 border border-white/10 rounded-2xl p-5">
             <div className="flex items-center gap-3 mb-4 pb-4 border-b border-white/10">
-               <Clock className="w-5 h-5 text-teal-300 shrink-0" />
-               <div className="text-base">
-                 <p className="text-white font-medium">Emergency Care</p>
-                 <p className="text-teal-200">24 Hours / 7 Days</p>
-               </div>
+              <Clock className="w-5 h-5 text-teal-300 shrink-0" />
+              <div className="text-base">
+                <p className="text-white font-medium">Emergency Care</p>
+                <p className="text-teal-200">24 Hours / 7 Days</p>
+              </div>
             </div>
             <div className="space-y-3 text-base">
-               <div className="flex justify-between">
-                 <span>Mon - Sat</span>
-                 <span className="text-white font-medium">9:00 AM - 9:00 PM</span>
-               </div>
-               <div className="flex justify-between">
-                 <span>Sunday</span>
-                 <span className="text-white font-medium">9:00 AM - 2:00 PM</span>
-               </div>
+              <div className="flex justify-between">
+                <span>Mon - Sat</span>
+                <span className="text-white font-medium">9:00 AM - 9:00 PM</span>
+              </div>
+              <div className="flex justify-between">
+                <span>Sunday</span>
+                <span className="text-white font-medium">9:00 AM - 2:00 PM</span>
+              </div>
             </div>
           </div>
         </div>
       </div>
 
       <div className="max-w-7xl mx-auto px-6 border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-white/50">
-        <p className="text-text-muted text-sm italic">© {new Date().getFullYear()} Krishna Hospital. Established 2021.</p>
+        <p className="text-text-muted text-sm italic">© {new Date().getFullYear()} Krishna Hospital.</p>
         <div className="flex flex-wrap justify-center md:justify-end items-center gap-y-2 gap-x-6">
-          <div className="flex gap-6">
-            <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
-            <a href="#" className="hover:text-white transition-colors">Terms of Service</a>
-          </div>
-          <span className="w-px h-3 bg-white/10 hidden lg:block"></span>
           <p className="flex items-center gap-1 text-base">
             Designed & Developed by{" "}
-            <a 
-              href="https://godivatech.com" 
-              target="_blank" 
+            <a
+              href="https://godivatech.com"
+              target="_blank"
               rel="noopener noreferrer"
               className="text-white hover:text-teal-200 font-bold transition-colors"
             >
