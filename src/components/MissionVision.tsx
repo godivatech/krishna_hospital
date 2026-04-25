@@ -52,6 +52,10 @@ export default function MissionVision() {
             `}
           >
             <div className="absolute inset-0 bg-gradient-to-br from-primary-dark to-primary-deep transition-transform duration-1000 group-hover:scale-105"></div>
+            <div 
+              className="absolute inset-0 opacity-10 mix-blend-overlay bg-cover bg-center pointer-events-none transition-transform duration-[1500ms] group-hover:scale-110"
+              style={{ backgroundImage: "url('/vision-bg.png')" }}
+            ></div>
 
             {/* Massive watermark icon */}
             <div className="absolute -top-24 -right-24 text-white/5 transition-transform duration-1000 group-hover:scale-110 group-hover:-translate-x-10 group-hover:rotate-12 pointer-events-none">
@@ -82,6 +86,10 @@ export default function MissionVision() {
             `}
           >
             <div className="absolute inset-0 bg-gradient-to-br from-[#24A8AC] to-[#1a7e81] transition-transform duration-1000 group-hover:scale-105"></div>
+            <div 
+              className="absolute inset-0 opacity-15 mix-blend-overlay bg-cover bg-center pointer-events-none transition-transform duration-[1500ms] group-hover:scale-110"
+              style={{ backgroundImage: "url('/mission-bg.png')" }}
+            ></div>
 
             {/* Massive watermark icon */}
             <div className="absolute -top-24 -right-24 text-white/10 transition-transform duration-1000 group-hover:scale-110 group-hover:-translate-x-10 group-hover:-rotate-12 pointer-events-none">
