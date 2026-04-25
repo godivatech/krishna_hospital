@@ -84,7 +84,7 @@ export default function Doctors() {
                <div className="flex flex-col flex-1 py-4 relative z-10">
                   <div className="mb-auto text-center md:text-left">
                     <h4 className="text-3xl font-serif font-bold mb-3 text-white group-hover:text-teal-200 transition-colors tracking-tight">{doc.name}</h4>
-                    <p className="text-teal-400 text-lg font-semibold mb-5 flex items-center justify-center md:justify-start gap-2.5">
+                    <p className="text-teal-200 text-lg font-semibold mb-5 flex items-center justify-center md:justify-start gap-2.5">
                       <span className="p-1.5 bg-teal-400/10 rounded-lg">
                         <Activity className="w-4 h-4 text-teal-300" />
                       </span>
