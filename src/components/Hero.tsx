@@ -25,7 +25,7 @@ export default function Hero() {
       accent: "text-teal-200"
     },
     {
-      title: "Advanced",
+      title: "Specialized",
       subtitle: "ICU & NICU",
       description: "Providing the highest level of critical care and advanced life support for adult and neonatal patients in a safe environment.",
       image: "/banner_3.png",
