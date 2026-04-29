@@ -5,6 +5,7 @@ import MissionVision from "@/components/MissionVision";
 import Departments from "@/components/Departments";
 import Doctors from "@/components/Doctors";
 import Testimonials from "@/components/Testimonials";
+import LocationMap from "@/components/LocationMap";
 import Footer from "@/components/Footer";
 
 export default function Home() {
@@ -18,6 +19,7 @@ export default function Home() {
         <Departments />
         <Doctors />
         <Testimonials />
+        <LocationMap />
         <Footer />
       </main>
     </>
