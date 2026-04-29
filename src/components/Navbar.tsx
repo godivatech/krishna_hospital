@@ -80,10 +80,7 @@ export default function Navbar() {
             transition={{ type: "spring", damping: 25, stiffness: 200 }}
             className="fixed inset-0 bg-white z-40 md:hidden flex flex-col justify-center items-center p-8"
           >
-            <nav className="flex flex-col gap-8 text-center items-center">
-              <Link href="/" onClick={() => setIsOpen(false)} className="mb-8">
-                <img src="/Logo%20Png.png" alt="Krishna Hospital" className="h-24 w-auto object-contain" />
-              </Link>
+            <nav className="flex flex-col gap-8 text-center items-center pt-20">
 
               {navLinks.map((link, i) => (
                 <motion.div
