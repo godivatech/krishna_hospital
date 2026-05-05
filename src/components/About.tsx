@@ -36,29 +36,28 @@ export default function About() {
           <h3 className="text-4xl md:text-5xl font-serif text-primary leading-tight mb-6">
             A Legacy of Care and Compassion
           </h3>
-          <p className="text-lg text-text-muted mb-6 leading-relaxed">
-            Established in 2021 in Ramanathapuram, Krishna Hospital aims to provide the <span className="font-semibold text-primary">highest standards</span> of surgical and maternity care. With a strong focus on <span className="font-semibold text-primary">maternal and child care</span> along with general and <span className="font-semibold text-primary">laparoscopic surgeries</span>, the hospital is committed to delivering compassionate, affordable, and high-quality healthcare.
+          <p className="text-lg text-text-muted mb-8 leading-relaxed">
+            Our story began in <span className="font-semibold text-primary">2015</span> with a vision to make quality healthcare accessible to every family in the region. Growing steadily, by <span className="font-semibold text-primary">2018</span> we had expanded our reach with a wider range of services and a growing team of specialists. In <span className="font-semibold text-primary">2021</span>, that vision culminated in Krishna Hospital — a full-fledged multi-specialty hospital in Ramanathapuram, dedicated to delivering the <span className="font-semibold text-primary">highest standards</span> of surgical and maternity care with compassion, affordability, and excellence.
           </p>
+
           {/* Visual Timeline */}
-          <div className="mb-12 p-8 rounded-[2rem] bg-slate-50/50 border border-slate-100">
-            <h4 className="text-[10px] font-bold uppercase tracking-[0.2em] text-teal-600/60 mb-8">Our Journey of Excellence</h4>
-            <div className="relative flex justify-between items-start">
-              {/* Connecting Line */}
-              <div className="absolute top-5 left-0 w-full h-[2px] bg-gradient-to-r from-teal-100 via-teal-200 to-teal-100 z-0"></div>
-              
+          <div className="mb-12 rounded-[2rem] bg-slate-50/50 border border-slate-100 overflow-hidden">
+            <div className="px-8 pt-6 pb-2">
+              <h4 className="text-[10px] font-bold uppercase tracking-[0.2em] text-teal-600/60">A Decade of Healing — Our Milestones</h4>
+            </div>
+            <div className="p-6 grid grid-cols-3 divide-x divide-slate-100">
               {[
-                { year: "2015", name: "Prema Clinic" },
-                { year: "2018", name: "Sandhiya Clinic" },
-                { year: "2021", name: "Krishna Hospital" }
+                { year: "2015", name: "Prema Clinic", note: "Where our commitment to patient care first took root." },
+                { year: "2018", name: "Sandhiya Clinic", note: "Expanded services and a wider reach across the community." },
+                { year: "2021", name: "Krishna Hospital", note: "Evolved into a full-fledged multi-specialty hospital.", active: true }
               ].map((m, i) => (
-                <div key={i} className="relative z-10 flex flex-col items-center">
-                  <div className="w-10 h-10 rounded-full bg-white border-2 border-teal-500 shadow-sm flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                    <div className={`w-3 h-3 rounded-full ${i === 2 ? 'bg-teal-600 animate-pulse' : 'bg-teal-200'}`}></div>
+                <div key={i} className={`flex flex-col items-center text-center px-4 py-4 ${m.active ? 'bg-teal-50/50' : ''}`}>
+                  <div className={`w-10 h-10 rounded-full flex items-center justify-center mb-3 shadow-sm border-2 ${m.active ? 'bg-teal-600 border-teal-600' : 'bg-white border-teal-300'}`}>
+                    <div className={`w-3 h-3 rounded-full ${m.active ? 'bg-white animate-pulse' : 'bg-teal-200'}`}></div>
                   </div>
-                  <span className="text-base font-bold text-primary mb-1">{m.year}</span>
-                  <span className="text-[11px] text-text-muted font-bold uppercase tracking-tight text-center max-w-[70px] leading-tight">
-                    {m.name}
-                  </span>
+                  <span className={`text-lg font-bold mb-0.5 ${m.active ? 'text-teal-600' : 'text-primary'}`}>{m.year}</span>
+                  <span className="text-[11px] font-bold uppercase tracking-tight text-primary mb-2">{m.name}</span>
+                  <p className="text-[11px] text-text-muted leading-snug">{m.note}</p>
                 </div>
               ))}
             </div>
