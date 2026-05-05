@@ -62,7 +62,7 @@ export default function Footer() {
             <li className="flex items-start gap-4">
               <div className="mt-1"><MapPin className="w-5 h-5 text-teal-300" /></div>
               <span className="text-base leading-relaxed">
-                NO.45, Madurai Road, Opposite to Chidambaram Pillai Oorani, Ramanathapuram-62350
+                No. 45, Madurai Main Road, Pillaiyar Kovil Bus Stop, Chidambaram Pillai Oorani Opp., Ramanathapuram 623501
               </span>
             </li>
             <li className="flex items-center gap-4">

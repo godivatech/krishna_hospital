@@ -36,8 +36,11 @@ export default function About() {
           <h3 className="text-4xl md:text-5xl font-serif text-primary leading-tight mb-6">
             A Legacy of Care and Compassion
           </h3>
-          <p className="text-lg text-text-muted mb-10 leading-relaxed">
-            Established in 2021 in Ramanathapuram, Krishna Hospital aims to provide the <span className="font-semibold text-primary">highest standards</span> of surgical and maternity care. With a strong focus on <span className="font-semibold text-primary">maternal and child care</span> along with general and <span className="font-semibold text-primary">laparoscopic surgeries</span>, the hospital is committed to delivering compassionate, affordable, and <span className="font-semibold text-primary">high-quality healthcare</span>.
+          <p className="text-lg text-text-muted mb-6 leading-relaxed">
+            Established in 2021 in Ramanathapuram, Krishna Hospital aims to provide the <span className="font-semibold text-primary">highest standards</span> of surgical and maternity care. With a strong focus on <span className="font-semibold text-primary">maternal and child care</span> along with general and <span className="font-semibold text-primary">laparoscopic surgeries</span>, the hospital is committed to delivering compassionate, affordable, and high-quality healthcare.
+          </p>
+          <p className="text-base text-teal-600 mb-10 font-medium leading-relaxed italic">
+            Our commitment to care began with <span className="font-bold">Prema Clinic (2015)</span> and <span className="font-bold">Sandhiya Clinic (2018)</span>, laying the foundation for the multispecialty excellence we offer today.
           </p>
 
           <div className="grid grid-cols-2 gap-x-8 gap-y-10">

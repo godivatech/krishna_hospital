@@ -1,24 +1,19 @@
 "use client";
 import { motion } from "framer-motion";
-import { Stethoscope, FileHeart, Activity, Baby, Pill, ShieldPlus, Syringe, Dna, Ear, Flame, Heart } from "lucide-react";
+import { Stethoscope, FileHeart, Activity, Baby, Pill, ShieldPlus, Syringe, Dna, Ear, Flame, Heart, HeartPulse } from "lucide-react";
 
 export default function Departments() {
   const departments = [
-    { name: "General Medicine", icon: ShieldPlus, desc: "Comprehensive medical assessments and care." },
-    { name: "General Surgery", icon: Syringe, desc: "Comprehensive surgical procedures." },
+    { name: "Pregnancy Care", icon: Baby, desc: "Expert pregnancy and delivery care for a safe journey." },
+    { name: "High Risk Pregnancy", icon: FileHeart, desc: "Specialized care for complex and high-risk pregnancies." },
+    { name: "Infertility", icon: Dna, desc: "Advanced fertility solutions and compassionate support." },
+    { name: "Gastro & General Surgery", icon: Syringe, desc: "Comprehensive gastrointestinal and general surgical procedures." },
     { name: "Laparoscopic Surgery", icon: Activity, desc: "Advanced minimally invasive surgical techniques." },
-    { name: "Pregnancy Care", icon: Baby, desc: "Expert pregnancy and delivery care." },
-    { name: "High-Risk Pregnancy", icon: FileHeart, desc: "Specialized care for complex pregnancies." },
-    { name: "Infertility Treatment", icon: Dna, desc: "Advanced fertility solutions and support." },
-    { name: "Neonatal Care", icon: Baby, desc: "Intensive care for premature newborns." },
-    { name: "Pediatric Care", icon: Heart, desc: "Healthcare for children & adolescents." },
-    { name: "Gastro Care", icon: Flame, desc: "Digestive system disorder treatments." },
-    { name: "Nephrology", icon: Stethoscope, desc: "Dedicated kidney health management." },
-    { name: "Urology", icon: Activity, desc: "Advanced kidney & urinary solutions." },
-    { name: "Diabetology", icon: Pill, desc: "Comprehensive diabetes management." },
-    { name: "Orthopaedics", icon: FileHeart, desc: "Bone, joint, and musculoskeletal care." },
-    { name: "ENT", icon: Ear, desc: "Ear, nose, and throat diagnostics." },
-    { name: "Emergency & Trauma", icon: ShieldPlus, desc: "24/7 critical care and trauma support." }
+    { name: "Pediatric & Neonatal Care", icon: Baby, desc: "Specialized healthcare for children and intensive care for newborns." },
+    { name: "Orthopaedics", icon: FileHeart, desc: "Expert bone, joint, and musculoskeletal care." },
+    { name: "Emergency & Trauma", icon: ShieldPlus, desc: "24/7 critical care and trauma support for emergencies." },
+    { name: "Urology & Nephrology", icon: Stethoscope, desc: "Dedicated care for kidney and urinary tract health." },
+    { name: "Plastic Surgery", icon: HeartPulse, desc: "Advanced reconstructive and aesthetic surgical procedures." }
   ];
 
   return (

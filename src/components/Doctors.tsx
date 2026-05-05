@@ -8,11 +8,11 @@ export default function Doctors() {
     { 
       name: "Dr. Dinesh Mukil", 
       role: "Surgical Gastroenterologist", 
-      desc: "MBBS., MS., FIAGES., FALS.", 
+      desc: "MBBS., MS., FIAGES., FALS., FAGIE", 
       img: "/dr-dinesh-mukil.png" 
     },
     { 
-      name: "Dr. Nandhini Dinesh Mukil", 
+      name: "Dr. Nandini", 
       role: "Obstetrician & Gynaecologist", 
       desc: "MBBS., MS(OG)., DNB(OG)., MRCOG(UK)., FMAS.", 
       img: "/dr-nandhini.png" 
