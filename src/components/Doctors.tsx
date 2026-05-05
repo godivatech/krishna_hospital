@@ -7,14 +7,14 @@ export default function Doctors() {
   const doctors = [
     { 
       name: "Dr. Dinesh Mukil", 
-      role: "Surgical Gastroenterologist", 
-      desc: "MBBS., MS., FIAGES., FALS., FAGIE", 
+      role: "HOD OF SURGERY", 
+      desc: "MBBS., MS., FIAGES., FAGIE. FALS., DIP LAP (Starsbourg).", 
       img: "/dr-dinesh-mukil.png" 
     },
     { 
-      name: "Dr. Nandini", 
-      role: "Obstetrician & Gynaecologist", 
-      desc: "MBBS., MS(OG)., DNB(OG)., MRCOG(UK)., FMAS.", 
+      name: "Dr. Nandini Parasuraman", 
+      role: "HOD OF OBSTETRICS & GYNECOLOGY", 
+      desc: "MBBS., MS OG., FMAS.", 
       img: "/dr-nandhini.png" 
     },
   ];
