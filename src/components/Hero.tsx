@@ -12,8 +12,8 @@ export default function Hero() {
   const slides = [
     {
       title: "Advanced Surgery &",
-      subtitle: "Maternity Care",
-      description: "Ramanathapuram's trusted multi-specialty hospital. We bring surgical excellence and compassionate maternity care together under one roof.",
+      subtitle: "Maternity Center",
+      description: "Ramanathapuram's trusted multi-specialty hospital. We bring surgical excellence and compassionate maternity center together under one roof.",
       image: "/banner_1.png",
       accent: "text-teal-200"
     },
