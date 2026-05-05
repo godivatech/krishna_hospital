@@ -39,9 +39,30 @@ export default function About() {
           <p className="text-lg text-text-muted mb-6 leading-relaxed">
             Established in 2021 in Ramanathapuram, Krishna Hospital aims to provide the <span className="font-semibold text-primary">highest standards</span> of surgical and maternity care. With a strong focus on <span className="font-semibold text-primary">maternal and child care</span> along with general and <span className="font-semibold text-primary">laparoscopic surgeries</span>, the hospital is committed to delivering compassionate, affordable, and high-quality healthcare.
           </p>
-          <p className="text-base text-teal-600 mb-10 font-medium leading-relaxed italic">
-            Our commitment to care began with <span className="font-bold">Prema Clinic (2015)</span> and <span className="font-bold">Sandhiya Clinic (2018)</span>, laying the foundation for the multispecialty excellence we offer today.
-          </p>
+          {/* Visual Timeline */}
+          <div className="mb-12 p-8 rounded-[2rem] bg-slate-50/50 border border-slate-100">
+            <h4 className="text-[10px] font-bold uppercase tracking-[0.2em] text-teal-600/60 mb-8">Our Journey of Excellence</h4>
+            <div className="relative flex justify-between items-start">
+              {/* Connecting Line */}
+              <div className="absolute top-5 left-0 w-full h-[2px] bg-gradient-to-r from-teal-100 via-teal-200 to-teal-100 z-0"></div>
+              
+              {[
+                { year: "2015", name: "Prema Clinic" },
+                { year: "2018", name: "Sandhiya Clinic" },
+                { year: "2021", name: "Krishna Hospital" }
+              ].map((m, i) => (
+                <div key={i} className="relative z-10 flex flex-col items-center">
+                  <div className="w-10 h-10 rounded-full bg-white border-2 border-teal-500 shadow-sm flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                    <div className={`w-3 h-3 rounded-full ${i === 2 ? 'bg-teal-600 animate-pulse' : 'bg-teal-200'}`}></div>
+                  </div>
+                  <span className="text-base font-bold text-primary mb-1">{m.year}</span>
+                  <span className="text-[11px] text-text-muted font-bold uppercase tracking-tight text-center max-w-[70px] leading-tight">
+                    {m.name}
+                  </span>
+                </div>
+              ))}
+            </div>
+          </div>
 
           <div className="grid grid-cols-2 gap-x-8 gap-y-10">
             {stats.map((stat, idx) => (
