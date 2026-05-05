@@ -4,7 +4,7 @@ import { Star, Quote } from "lucide-react";
 
 export default function Testimonials() {
   const testimonials = [
-    { text: "Excellent care and supportive staff.", author: "Anonymous", role: "Maternity / Surgery Patient" },
+    { text: "Excellent care and supportive staff.", author: "S. Priya", role: "Maternity / Surgery Patient" },
     { text: "State-of-the-art facilities in Ramanathapuram. The surgical team is incredibly skilled and the recovery process was extremely smooth and comfortable.", author: "R. Krishnan", role: "Surgery Patient" },
     { text: "My father was admitted to the ICU here. The 24/7 care and advanced equipment saved his life. Eternally grateful to the medical staff.", author: "V. Kumar", role: "Family Member" },
     { text: "Very professional environment. The entire team makes you feel safe and comfortable right from the consultation all the way through to treatment.", author: "S. Meena", role: "Patient" },
