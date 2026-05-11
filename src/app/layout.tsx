@@ -26,7 +26,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="scroll-smooth" suppressHydrationWarning>
-      <body className={`${poppins.variable} ${playfair.variable} font-sans antialiased`}>
+      <body className={`${poppins.variable} ${playfair.variable} font-sans antialiased`} suppressHydrationWarning>
         {children}
         <WhatsAppFloat />
       </body>

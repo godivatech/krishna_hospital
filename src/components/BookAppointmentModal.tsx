@@ -97,7 +97,7 @@ const BookAppointmentModal: React.FC<BookAppointmentModalProps> = ({ isOpen, onC
                       value={formData.name}
                       onChange={handleChange}
                       className="block w-full pl-10 pr-3 py-3 border border-slate-200 rounded-xl focus:ring-2 focus:ring-blue-600 focus:border-blue-600 transition-colors bg-slate-50 focus:bg-white text-slate-900"
-                      placeholder="John Doe"
+                      placeholder="Enter your name"
                     />
                   </div>
                 </div>
@@ -115,7 +115,7 @@ const BookAppointmentModal: React.FC<BookAppointmentModalProps> = ({ isOpen, onC
                       value={formData.phone}
                       onChange={handleChange}
                       className="block w-full pl-10 pr-3 py-3 border border-slate-200 rounded-xl focus:ring-2 focus:ring-blue-600 focus:border-blue-600 transition-colors bg-slate-50 focus:bg-white text-slate-900"
-                      placeholder="+91 98765 43210"
+                      placeholder="Enter your number"
                     />
                   </div>
                 </div>
