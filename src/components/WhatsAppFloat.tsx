@@ -15,7 +15,7 @@ export default function WhatsAppFloat() {
 
   if (!isVisible) return null;
 
-  const phoneNumber = "919789223246";
+  const phoneNumber = "917806923656";
   const message = "Hello! I would like to inquire about an appointment at Krishna Hospital.";
   const encodedMessage = encodeURIComponent(message);
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;

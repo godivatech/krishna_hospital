@@ -31,7 +31,7 @@ export default function Footer() {
             <a href="#" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-teal-600 hover:text-white transition-colors">
               <Globe className="w-4 h-4" />
             </a>
-            <a href="https://wa.me/919789223246" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-teal-600 hover:text-white transition-colors">
+            <a href="https://wa.me/917806923656" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-teal-600 hover:text-white transition-colors">
               <MessageCircle className="w-4 h-4" />
             </a>
             <a href="#" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-teal-600 hover:text-white transition-colors">

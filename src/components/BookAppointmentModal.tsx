@@ -36,7 +36,7 @@ const BookAppointmentModal: React.FC<BookAppointmentModalProps> = ({ isOpen, onC
     
     // For now, let's create a WhatsApp link to send the details directly to the hospital's number
     const text = `*New Appointment Request*%0A%0A*Name:* ${formData.name}%0A*Phone:* ${formData.phone}%0A*Date:* ${formData.date}%0A*Department:* ${formData.department}%0A*Message:* ${formData.message}`;
-    window.open(`https://wa.me/919789223246?text=${text}`, '_blank');
+    window.open(`https://wa.me/917806923656?text=${text}`, '_blank');
     
     onClose();
     // Reset form
