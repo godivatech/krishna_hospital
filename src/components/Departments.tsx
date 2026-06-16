@@ -1,19 +1,22 @@
 "use client";
 import { motion } from "framer-motion";
-import { Stethoscope, FileHeart, Activity, Baby, Pill, ShieldPlus, Syringe, Dna, Ear, Flame, Heart, HeartPulse } from "lucide-react";
+import { Stethoscope, FileHeart, Activity, Baby, Pill, ShieldPlus, Syringe, Dna, Ear, Flame, Heart, HeartPulse, Brain } from "lucide-react";
 
 export default function Departments() {
   const departments = [
     { name: "Pregnancy Care", icon: Baby, desc: "Expert pregnancy and delivery care for a safe journey." },
-    { name: "High Risk Pregnancy", icon: FileHeart, desc: "Specialized care for complex and high-risk pregnancies." },
-    { name: "Infertility", icon: Dna, desc: "Advanced fertility solutions and compassionate support." },
+    { name: "High risk Pregnancy", icon: FileHeart, desc: "Specialized care for complex and high-risk pregnancies." },
     { name: "Gastro & General Surgery", icon: Syringe, desc: "Comprehensive gastrointestinal and general surgical procedures." },
     { name: "Laparoscopic Surgery", icon: Activity, desc: "Advanced minimally invasive surgical techniques." },
+    { name: "Cancer Surgery", icon: Pill, desc: "Specialized surgical treatment and oncology care." },
     { name: "Pediatric & Neonatal Care", icon: Baby, desc: "Specialized healthcare for children and intensive care for newborns." },
+    { name: "Infertility", icon: Dna, desc: "Advanced fertility solutions and compassionate support." },
     { name: "Orthopaedics", icon: FileHeart, desc: "Expert bone, joint, and musculoskeletal care." },
     { name: "Emergency & Trauma", icon: ShieldPlus, desc: "24/7 critical care and trauma support for emergencies." },
     { name: "Urology & Nephrology", icon: Stethoscope, desc: "Dedicated care for kidney and urinary tract health." },
-    { name: "Plastic Surgery", icon: HeartPulse, desc: "Advanced reconstructive and aesthetic surgical procedures." }
+    { name: "Plastic Surgery", icon: HeartPulse, desc: "Advanced reconstructive and aesthetic surgical procedures." },
+    { name: "Neurosurgery", icon: Brain, desc: "Advanced surgical care for brain, spine, and nervous system disorders." },
+    { name: "ICU services", icon: ShieldPlus, desc: "24/7 intensive care monitoring and support for critically ill patients." }
   ];
 
   return (
@@ -45,7 +48,7 @@ export default function Departments() {
             transition={{ delay: 0.2 }}
             className="text-lg text-text-muted"
           >
-            With 15 recognized departments, our team of experts provides comprehensive care across a wide range of medical specialties ensuring swift recovery.
+            With 13 recognized departments, our team of experts provides comprehensive care across a wide range of medical specialties ensuring swift recovery.
           </motion.p>
         </div>
 

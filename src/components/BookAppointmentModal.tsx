@@ -8,15 +8,19 @@ interface BookAppointmentModalProps {
 }
 
 const departments = [
-  "General Medicine",
-  "General Surgery",
-  "Laparoscopic Surgery",
   "Pregnancy Care",
-  "High-Risk Pregnancy",
-  "Infertility Treatment",
-  "Neonatal Care",
-  "Pediatric Care",
-  "Emergency & Trauma Care",
+  "High risk Pregnancy",
+  "Gastro & General Surgery",
+  "Laparoscopic Surgery",
+  "Cancer Surgery",
+  "Pediatric & Neonatal Care",
+  "Infertility",
+  "Orthopaedics",
+  "Emergency & Trauma",
+  "Urology & Nephrology",
+  "Plastic Surgery",
+  "Neurosurgery",
+  "ICU services",
   "Other"
 ];
 
