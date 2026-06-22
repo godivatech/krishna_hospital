@@ -14,10 +14,10 @@ export default function Doctors() {
       img: "/dr-dinesh-mukil.png"
     },
     {
-      name: "Dr. Nandini Parasuraman",
-      role: "HOD OF OBSTETRICS & GYNECOLOGY",
-      badge: "HOD of OBG",
-      desc: "MBBS., MS OG., FMAS.",
+      name: "Dr. Nandini",
+      role: "LEAD OBSTETRICIAN & GYNAECOLOGIST",
+      badge: "Lead OBG",
+      desc: "MBBS., MS OG.",
       img: "/dr-nandhini.png"
     },
     {
