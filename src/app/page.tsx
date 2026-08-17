@@ -12,7 +12,7 @@ import InitialPopupModal from "@/components/InitialPopupModal";
 export default function Home() {
   return (
     <>
-      <InitialPopupModal />
+      {/* <InitialPopupModal /> */}
       <Navbar />
       <main>
         <Hero />
